@@ -15,7 +15,7 @@ namespace PastelECia.Cliente
 {
     public partial class frmVenda : Form
     {
-        List<Produto> lstProdutos = new List<Produto>();
+        private List<Produto> lstProdutos = new List<Produto>();
 
         public frmVenda()
         {
@@ -24,24 +24,31 @@ namespace PastelECia.Cliente
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            var total = Convert.ToInt32(txtValor.Text) * Convert.ToInt32(txtQuantidade.Text);
             var produto = new Produto();
             produto.Nome = txtNome.Text;
-            produto.Valor = Convert.ToInt32(txtValor.Text);
+            produto.Valor = Convert.ToDouble(txtValor.Text);
             produto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
-            
+
             lstProdutos.Add(produto);
 
-            dtgVenda.Rows.Clear();
-            dtgVenda.Refresh();
+            ResetGrid();
 
             dtgVenda.DataSource = lstProdutos;
+        }
 
+        private void ResetGrid()
+        {
+            dtgVenda.DataSource = null;
+            dtgVenda.Update();
             dtgVenda.Refresh();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            double valorTotal = lstProdutos.Sum(p => p.ValorTotal);
+            var venda = new Venda();
+            venda.ValorTotalVenda = valorTotal;
+
             var dt = GerarDados();
             frmRelNotaVenda frm = new frmRelNotaVenda(dt);
             frm.ShowDialog();
@@ -54,11 +61,18 @@ namespace PastelECia.Cliente
             dt.Columns.Add("Nome");
             dt.Columns.Add("Quantidade");
             dt.Columns.Add("Valor");
+            dt.Columns.Add("ValorTotal");
+            dt.Columns.Add("ValorTotalVenda");
 
             foreach(DataGridViewRow item in dtgVenda.Rows)
             {
-                dt.Rows.Add(item.Cells["Nome"].Value.ToString(), item.Cells["Quantidade"].Value.ToString(), Convert.ToDecimal(item.Cells["Valor"].Value.ToString()));
+                dt.Rows.Add(item.Cells["Nome"].Value.ToString(), item.Cells["Quantidade"].Value.ToString(), Convert.ToDecimal(item.Cells["Valor"].Value.ToString()), Convert.ToDecimal(item.Cells["ValorTotal"].Value.ToString()));
             }
+
+            dt.Rows.Add("", "", "", "");
+
+            double valorTotal = lstProdutos.Sum(p => p.ValorTotal);
+            dt.Rows.Add("", "", "Valor Total Venda: ", valorTotal);
 
             return dt;
         }

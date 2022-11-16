@@ -42,9 +42,12 @@
             // 
             // dtgVenda
             // 
+            this.dtgVenda.AllowUserToAddRows = false;
+            this.dtgVenda.AllowUserToDeleteRows = false;
             this.dtgVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgVenda.Location = new System.Drawing.Point(12, 251);
             this.dtgVenda.Name = "dtgVenda";
+            this.dtgVenda.ReadOnly = true;
             this.dtgVenda.Size = new System.Drawing.Size(776, 187);
             this.dtgVenda.TabIndex = 0;
             // 

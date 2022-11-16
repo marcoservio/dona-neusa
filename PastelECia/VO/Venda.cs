@@ -8,7 +8,6 @@ namespace PastelECia.VO
 {
     public class Venda
     {
-        public List<Produto> lstProduto { get; set; }
-        public DateTime DataVenda { get; set; }
+        public double ValorTotalVenda { get; set; }
     }
 }
