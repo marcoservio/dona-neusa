@@ -229,6 +229,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\VersaoSistema.cs" />
     <Compile Include="Views\frmVenda.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -46,11 +46,26 @@ namespace PastelECia.Cliente
             dtgVenda.Refresh();
         }
 
-        private void EnableBotoes(bool sim)
+        private void ControleCampos(bool ativado)
         {
-            btnImprimir.Enabled = sim;
-            btnExcluir.Enabled = sim;
+            btnImprimir.Enabled = ativado;
+            btnExcluir.Enabled = ativado;
             txtQuantidade.Text = string.Empty;
+        }
+
+        private void CarregaGrid(List<Produto> produtos)
+        {
+            ResetGrid();
+            if(produtos.Count > 0)
+            {
+                dtgVenda.DataSource = lstProdutos;
+                this.dtgVenda.Columns["Id"].Visible = false;
+            }
+            else
+            {
+                ControleCampos(false);
+                cmbProdutos.SelectedIndex = 0;
+            }
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -59,8 +74,6 @@ namespace PastelECia.Cliente
             {
                 if(txtQuantidade.Text == string.Empty)
                     throw new Exception("Digite uma quantidade.");
-
-                ResetGrid();
 
                 Produto produto = new Produto();
                 Produto combo = (Produto) cmbProdutos.SelectedItem;
@@ -72,11 +85,9 @@ namespace PastelECia.Cliente
 
                 lstProdutos.Add(produto);
 
-                dtgVenda.DataSource = lstProdutos;
+                CarregaGrid(lstProdutos);
 
-                this.dtgVenda.Columns["Id"].Visible = false;
-
-                EnableBotoes(true);
+                ControleCampos(true);
             }
             catch(Exception ex)
             {
@@ -137,16 +148,8 @@ namespace PastelECia.Cliente
                     throw new Exception("Clique um item da tabela para excluir");
 
                 lstProdutos.RemoveAt(dtgVenda.CurrentRow.Index);
-                ResetGrid();
-                if(lstProdutos.Count > 0)
-                {
-                    dtgVenda.DataSource = lstProdutos;
-                    this.dtgVenda.Columns["Id"].Visible = false;
-                }
-                else
-                {
-                    EnableBotoes(false);
-                }
+
+                CarregaGrid(lstProdutos);
             }
             catch(Exception ex)
             {
