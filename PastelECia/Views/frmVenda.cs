@@ -8,6 +8,8 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
+using static System.Net.Mime.MediaTypeNames;
+
 namespace PastelECia.Cliente
 {
     public partial class frmVenda : Form
@@ -21,11 +23,11 @@ namespace PastelECia.Cliente
 
         private void frmVenda_Load(object sender, EventArgs e)
         {
-            if(this.DesignMode == false)
+            if(DesignMode == false)
             {
                 ResetGrid();
-                LimparCampos();
                 CarregarComboProdutos();
+
             }
         }
 
@@ -33,7 +35,12 @@ namespace PastelECia.Cliente
         {
             try
             {
-                cmbProdutos.DataSource = new Produto().Produtos();
+                List<Produto> produtos = new Produto().Produtos();
+
+                if(produtos == null || produtos.Count == 0)
+                    throw new Exception("Não existe nenhum produto cadastrado.");
+
+                cmbProdutos.DataSource = produtos;
                 cmbProdutos.DisplayMember = "Produto";
                 cmbProdutos.ValueMember = "Nome";
             }
@@ -41,12 +48,6 @@ namespace PastelECia.Cliente
             {
                 MessageBox.Show(this, ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void LimparCampos()
-        {
-            txtQuantidade.Text = string.Empty;
-            cmbProdutos.Items.Clear();
         }
 
         private void ResetGrid()
@@ -61,36 +62,34 @@ namespace PastelECia.Cliente
             btnImprimir.Enabled = ativado;
             btnExcluir.Enabled = ativado;
             txtQuantidade.Text = string.Empty;
+            cmbProdutos.SelectedIndex = 0;
             cmbProdutos.Focus();
         }
 
         private void CarregaGrid(List<Produto> produtos)
         {
             ResetGrid();
-            if(produtos.Count > 0)
+
+            if(produtos != null && produtos.Count > 0)
             {
                 dtgVenda.DataSource = lstProdutos;
                 dtgVenda.Columns["Id"].Visible = false;
                 dtgVenda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dtgVenda.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-                dtgVenda.Columns["Nome"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             }
             else
-            {
                 ControleCampos(false);
-                cmbProdutos.SelectedIndex = 0;
-            }
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             try
             {
-                if(txtQuantidade.Text == string.Empty)
-                    throw new Exception("Digite uma quantidade.");
-
                 Produto produto = new Produto();
                 Produto combo = (Produto) cmbProdutos.SelectedItem;
+
+                if(string.IsNullOrEmpty(txtQuantidade.Text))
+                    throw new Exception("Digite uma quantidade.");
 
                 if(combo == null)
                     throw new Exception("Produto inválido.");
@@ -99,6 +98,9 @@ namespace PastelECia.Cliente
                 produto.Nome = combo.Nome;
                 produto.Valor = combo.Valor;
                 produto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+
+                if(produto == null)
+                    throw new Exception("Erro ao adicionar um produto na tabela.");
 
                 lstProdutos.Add(produto);
 
@@ -149,8 +151,8 @@ namespace PastelECia.Cliente
             dt.Rows.Add("", "", "", "");
 
             decimal valorTotal = lstProdutos.Sum(p => p.ValorTotal);
-            dt.Rows.Add("", "", "Valor Total Venda: ", Math.Round(Convert.ToDecimal(valorTotal), 2));
 
+            dt.Rows.Add("", "", "Valor Total Venda: ", Math.Round(Convert.ToDecimal(valorTotal), 2));
 
             return dt;
         }
@@ -198,6 +200,11 @@ namespace PastelECia.Cliente
             {
                 btnAdicionar_Click(sender, e);
             }
+        }
+
+        private void frmVenda_Activated(object sender, EventArgs e)
+        {
+            cmbProdutos.Focus();
         }
     }
 }
