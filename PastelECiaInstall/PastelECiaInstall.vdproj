@@ -501,6 +501,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_85504FD114AF42DE93B7D5324D0A946A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8A51F2C16454AE429AD4AAF0A3314B20"
         "OwnerKey" = "8:_2B533F60BA244543A5DD307EF2D47477"
         "MsmSig" = "8:_UNDEFINED"
@@ -1864,6 +1870,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -4064,6 +4078,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_85504FD114AF42DE93B7D5324D0A946A"
+            {
+            "SourcePath" = "8:..\\PastelECia\\Images\\Icons\\icons8-banknotes-32.ico"
+            "TargetName" = "8:icons8-banknotes-32.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_88653FC602B4475F9AFD64DA1CDF3D6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8A51F2C16454AE429AD4AAF0A3314B20"
             {
             "AssemblyRegister" = "3:1"
@@ -6239,6 +6273,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_88653FC602B4475F9AFD64DA1CDF3D6E"
+                    {
+                    "Name" = "8:icon"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_F1A653D1D124447C8A3ED4F80F85FE33"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_8B6562C65B5D480A9FBEB2F997B47100"
@@ -6279,15 +6324,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Pastel & CIA"
-        "ProductCode" = "8:{AD522F8B-B722-4C32-BB64-17AE6816AECA}"
-        "PackageCode" = "8:{0C339052-92EB-41AF-9978-BF91643F9D55}"
+        "ProductCode" = "8:{3A76A6C7-9C6F-4A36-AB92-D99099B16BB1}"
+        "PackageCode" = "8:{A037CAED-293C-4372-B7C2-8FA32D1FEA8E}"
         "UpgradeCode" = "8:{A6CFA5B3-61F1-4794-83AF-BA3111764D96}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4"
         "Manufacturer" = "8:MM Corporation"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -6297,7 +6342,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_85504FD114AF42DE93B7D5324D0A946A"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
