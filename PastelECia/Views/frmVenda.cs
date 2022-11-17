@@ -28,9 +28,16 @@ namespace PastelECia.Cliente
 
         private void CarregarComboProdutos()
         {
-            cmbProdutos.DataSource = new Produto().Produtos();
-            cmbProdutos.DisplayMember = "Produto";
-            cmbProdutos.ValueMember = "Nome";
+            try
+            {
+                cmbProdutos.DataSource = new Produto().Produtos();
+                cmbProdutos.DisplayMember = "Produto";
+                cmbProdutos.ValueMember = "Nome";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void LimparCampos()

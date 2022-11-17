@@ -58,13 +58,13 @@
         "Entry"
         {
         "MsmKey" = "8:_12272E320110532E3A02250CD1CF0793"
-        "OwnerKey" = "8:_2B533F60BA244543A5DD307EF2D47477"
+        "OwnerKey" = "8:_4D402C95EC19D5FF9E2529EB3006A87D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_12272E320110532E3A02250CD1CF0793"
-        "OwnerKey" = "8:_4D402C95EC19D5FF9E2529EB3006A87D"
+        "OwnerKey" = "8:_2B533F60BA244543A5DD307EF2D47477"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -976,12 +976,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4D402C95EC19D5FF9E2529EB3006A87D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2B533F60BA244543A5DD307EF2D47477"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1804,6 +1798,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4D402C95EC19D5FF9E2529EB3006A87D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_12272E320110532E3A02250CD1CF0793"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1825,6 +1825,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -1841,6 +1857,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -6209,7 +6233,7 @@
             {
             "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
@@ -6220,7 +6244,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_8B6562C65B5D480A9FBEB2F997B47100"
             {
             "Name" = "8:#1916"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:DesktopFolder"
@@ -6231,7 +6255,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_9560231A8FDD44EFB3C355224D5F6A6E"
             {
             "Name" = "8:#1919"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
@@ -6254,20 +6278,20 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:PastelECiaInstall"
-        "ProductCode" = "8:{482AD7A7-A360-4989-9453-562C413DB669}"
-        "PackageCode" = "8:{96A31DE1-F907-4E72-9DAD-0A42395F3927}"
+        "ProductName" = "8:Pastel & CIA"
+        "ProductCode" = "8:{AD522F8B-B722-4C32-BB64-17AE6816AECA}"
+        "PackageCode" = "8:{0C339052-92EB-41AF-9978-BF91643F9D55}"
         "UpgradeCode" = "8:{A6CFA5B3-61F1-4794-83AF-BA3111764D96}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "ProductVersion" = "8:1.0.3"
+        "Manufacturer" = "8:MM Corporation"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:PastelECiaInstall"
+        "Title" = "8:Pastel & CIA"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Balãozada"
         "Keywords" = "8:"

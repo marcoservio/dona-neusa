@@ -49,6 +49,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Icons\icons8-banknotes-32.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Caelum.Stella.CSharp, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Caelum.Stella.CSharp.1.4.7\lib\netstandard1.2\Caelum.Stella.CSharp.dll</HintPath>
@@ -290,7 +293,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Icons\ExibirRelatorio.ico" />
+    <Content Include="Images\ExibirRelatorio.png" />
+    <Content Include="Images\Icons\Fábrica.ico" />
+    <Content Include="Images\Fábrica.png" />
     <Content Include="Images\icons8-add-new-32.png" />
+    <Content Include="Images\Icons\icons8-banknotes-32.ico" />
+    <Content Include="Images\icons8-banknotes-32.png" />
     <Content Include="Images\icons8-remove-32.png" />
     <Content Include="Images\icons8-send-to-printer-32.png" />
   </ItemGroup>
