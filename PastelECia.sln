@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PastelECia", "PastelECia\PastelECia.csproj", "{F1997E33-190B-433F-B959-741B03F14746}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PastelECiaInstall", "PastelECiaInstall\PastelECiaInstall.vdproj", "{77125579-ED2D-42E9-AAC6-E7126A416239}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{F1997E33-190B-433F-B959-741B03F14746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1997E33-190B-433F-B959-741B03F14746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1997E33-190B-433F-B959-741B03F14746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77125579-ED2D-42E9-AAC6-E7126A416239}.Debug|Any CPU.ActiveCfg = Debug
+		{77125579-ED2D-42E9-AAC6-E7126A416239}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

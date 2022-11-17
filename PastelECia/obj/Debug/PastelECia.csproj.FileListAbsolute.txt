@@ -77,10 +77,6 @@ C:\Users\marco\OneDrive\git-marcoservio\alura\PastelECia\PastelECia\obj\Debug\Pa
 C:\Users\marco\OneDrive\git-marcoservio\alura\PastelECia\PastelECia\obj\Debug\PastelECia.exe
 C:\Users\marco\OneDrive\git-marcoservio\alura\PastelECia\PastelECia\obj\Debug\PastelECia.pdb
 C:\Users\marco\OneDrive\git-marcoservio\alura\PastelECia\PastelECia\obj\Debug\PastelECia.Cliente.frmVenda.resources
-C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\PastelECia.exe.config
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\PastelECia.exe
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\PastelECia.pdb
