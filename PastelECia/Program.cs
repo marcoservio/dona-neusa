@@ -10,7 +10,7 @@ namespace PastelECia
         [STAThread]
         static void Main()
         {
-            new VersaoSistema(1, 1, 1, 5);
+            new VersaoSistema(1, 1, 6);
 
             frmVenda frm = new frmVenda();
             frm.ShowDialog();

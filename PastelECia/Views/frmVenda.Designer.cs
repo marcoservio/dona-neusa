@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVenda));
             this.dtgVenda = new System.Windows.Forms.DataGridView();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
@@ -43,40 +43,44 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCalculadora = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtValorTotalVenda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgVenda
             // 
             this.dtgVenda.AllowUserToAddRows = false;
             this.dtgVenda.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.dtgVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dtgVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.DefaultCellStyle = dataGridViewCellStyle43;
             this.dtgVenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgVenda.Location = new System.Drawing.Point(0, 162);
             this.dtgVenda.Name = "dtgVenda";
             this.dtgVenda.ReadOnly = true;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.RowsDefaultCellStyle = dataGridViewCellStyle44;
             this.dtgVenda.Size = new System.Drawing.Size(629, 474);
             this.dtgVenda.TabIndex = 4;
             // 
@@ -93,10 +97,10 @@
             // lblQuantidade
             // 
             this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.Location = new System.Drawing.Point(12, 60);
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.Location = new System.Drawing.Point(6, 60);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(96, 20);
+            this.lblQuantidade.Size = new System.Drawing.Size(107, 20);
             this.lblQuantidade.TabIndex = 5;
             this.lblQuantidade.Text = "Quantidade:";
             // 
@@ -121,7 +125,7 @@
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(16, 109);
+            this.btnImprimir.Location = new System.Drawing.Point(10, 109);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(113, 38);
             this.btnImprimir.TabIndex = 3;
@@ -144,10 +148,10 @@
             // lblProdutos
             // 
             this.lblProdutos.AutoSize = true;
-            this.lblProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdutos.Location = new System.Drawing.Point(12, 16);
+            this.lblProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdutos.Location = new System.Drawing.Point(6, 16);
             this.lblProdutos.Name = "lblProdutos";
-            this.lblProdutos.Size = new System.Drawing.Size(77, 20);
+            this.lblProdutos.Size = new System.Drawing.Size(86, 20);
             this.lblProdutos.TabIndex = 10;
             this.lblProdutos.Text = "Produtos:";
             // 
@@ -198,11 +202,45 @@
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtValorTotalVenda);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 595);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(629, 41);
+            this.panel2.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(268, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Valor Total Venda:";
+            // 
+            // txtValorTotalVenda
+            // 
+            this.txtValorTotalVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtValorTotalVenda.BackColor = System.Drawing.SystemColors.Window;
+            this.txtValorTotalVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorTotalVenda.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtValorTotalVenda.Location = new System.Drawing.Point(432, 7);
+            this.txtValorTotalVenda.Name = "txtValorTotalVenda";
+            this.txtValorTotalVenda.ReadOnly = true;
+            this.txtValorTotalVenda.Size = new System.Drawing.Size(185, 26);
+            this.txtValorTotalVenda.TabIndex = 7;
+            this.txtValorTotalVenda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // frmVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 636);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtgVenda);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -218,6 +256,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +274,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCalculadora;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtValorTotalVenda;
+        private System.Windows.Forms.Label label1;
     }
 }

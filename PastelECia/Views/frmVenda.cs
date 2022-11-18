@@ -79,6 +79,8 @@ namespace PastelECia.Cliente
             }
             else
                 ControleCampos(false);
+
+            txtValorTotalVenda.Text = ValorTotalVenda().ToString();
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -149,12 +151,19 @@ namespace PastelECia.Cliente
             }
 
             dt.Rows.Add("", "", "", "");
-
-            decimal valorTotal = lstProdutos.Sum(p => p.ValorTotal);
-
-            dt.Rows.Add("", "", "Valor Total Venda: ", Math.Round(Convert.ToDecimal(valorTotal), 2));
+            dt.Rows.Add("", "", "Valor Total Venda: ", ValorTotalVenda());
 
             return dt;
+        }
+
+        private decimal ValorTotalVenda()
+        {
+            decimal total = decimal.Zero;
+
+            if(lstProdutos != null || lstProdutos.Count > 0)
+                total = lstProdutos.Sum(p => p.ValorTotal);
+
+            return Math.Round(Convert.ToDecimal(total), 2);
         }
 
         private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
