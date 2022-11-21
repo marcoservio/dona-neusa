@@ -1,1 +1,1 @@
-diaLimiteAcesso:      30
+diaLimiteAcesso:30

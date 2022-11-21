@@ -300,6 +300,7 @@
   <ItemGroup>
     <Content Include="Images\icons8-add-new-32.png" />
     <Content Include="Images\icons8-calculator-32.png" />
+    <Content Include="Images\icons8-close-window-32.png" />
     <Content Include="Images\icons8-remove-32.png" />
     <Content Include="Images\icons8-send-to-printer-32.png" />
     <Content Include="Images\Icons\ExibirRelatorio.ico" />

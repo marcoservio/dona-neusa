@@ -139,6 +139,16 @@
         rkJggg==
 </value>
   </data>
+  <data name="btnSair.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAADtSURBVFhH7Zc7DsIwEEQjLkID3ItPx0eiykEQDdekgwJmCiQLrz+7jgkIj/Qaa+N5kAjirkXI
+        HGxAPzBrwL2jOYA7eFSCe++AmAWoWf7iBmbAywpIF9SAXV6OQBquAbu8NIGUwFVYC5GaVQtwwyk4O2sh
+        OMPZmITpG7iACTg5a+/kzBCTAIkV5JYTswCRijTlpEiAuIXaclIsQPiwsZjkPJwuvy8w6i2QCrUSZoFY
+        kUbCJJBTkCuhFviKn+LUH4xLatYkMCRNQBT45EvpEnjhoWHU13JmD2pKsHwLoqEdj1HS8aoE7hn85P+a
+        rnsCqsifgzsihoQAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnExcluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAXJJREFUWEft

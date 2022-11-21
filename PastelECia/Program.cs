@@ -17,11 +17,14 @@ namespace PastelECia
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                new VersaoSistema(1, 1, 12);
+                new VersaoSistema(1, 1, 13);
 
-                StreamReader sr = new StreamReader("config.txt");
-                var line = sr.ReadLine();
-                sr.Close();
+                var line = string.Empty;
+
+                using(StreamReader sr = new StreamReader("config.txt"))
+                {
+                    line = sr.ReadToEnd();
+                }
 
                 if(line.Contains("diaLimiteAcesso:"))
                     line = line.Replace("diaLimiteAcesso:", "").Trim();
@@ -30,13 +33,11 @@ namespace PastelECia
                 if(int.TryParse(line.Trim(), out int diaLimiteAcesso))
                    data = new DateTime(DateTime.Now.Year, DateTime.Now.Month, diaLimiteAcesso, 23, 59, 59);
 
-                if(DateTime.Now < data)
-                {
-                    frmVenda frm = new frmVenda();
-                    frm.ShowDialog();
-                }
-                else
-                    MessageBox.Show("Tempo de teste da aplicação acabou! Contacte algum desenvolvedor do sistema para mais informações.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if(DateTime.Now >  data)
+                    throw new Exception("Tempo de teste da aplicação acabou! Contacte algum desenvolvedor do sistema para mais informações.");
+
+                frmVenda frm = new frmVenda();
+                frm.ShowDialog();
             }
             catch(Exception ex)
             {
