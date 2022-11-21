@@ -1,10 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PastelECia.VO
+namespace PastelECia.Models
 {
     public class Produto
     {
+        public Produto()
+        {
+            Nome = string.Empty;
+            Valor = 0;
+            Quantidade = 0;
+        }
+
         public int Id { get; set; }
         public string Nome { get; set; }
         public decimal Valor { get; set; }
@@ -15,13 +22,6 @@ namespace PastelECia.VO
             {
                 return Math.Round(Convert.ToDecimal(Quantidade * Valor), 2);
             }
-        }
-
-        public Produto()
-        {
-            Nome = string.Empty;
-            Valor = 0;
-            Quantidade = 0;
         }
 
         public List<Produto> Produtos()

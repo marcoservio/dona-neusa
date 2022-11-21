@@ -1,4 +1,4 @@
-﻿using PastelECia.Cliente;
+﻿using PastelECia.Views;
 using PastelECia.Models;
 
 using System;
@@ -10,7 +10,7 @@ namespace PastelECia
         [STAThread]
         static void Main()
         {
-            new VersaoSistema(1, 1, 8);
+            new VersaoSistema(1, 1, 9);
 
             frmVenda frm = new frmVenda();
             frm.ShowDialog();

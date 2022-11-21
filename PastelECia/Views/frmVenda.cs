@@ -1,16 +1,13 @@
 ﻿using PastelECia.Relatorios;
-using PastelECia.VO;
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using PastelECia.Models;
 
-using static System.Net.Mime.MediaTypeNames;
-
-namespace PastelECia.Cliente
+namespace PastelECia.Views
 {
     public partial class frmVenda : Form
     {
@@ -99,7 +96,7 @@ namespace PastelECia.Cliente
                 produto.Id++;
                 produto.Nome = combo.Nome;
                 produto.Valor = combo.Valor;
-                produto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+                produto.Quantidade = Convert.ToInt32(txtQuantidade.Text.Trim());
 
                 if(produto == null)
                     throw new Exception("Erro ao adicionar um produto na tabela.");
@@ -121,8 +118,14 @@ namespace PastelECia.Cliente
             try
             {
                 Cursor = Cursors.WaitCursor;
-                var dt = GerarDados();
-                frmRelNotaVenda frm = new frmRelNotaVenda(dt);
+
+                if(dtgVenda.Rows.Count == 0)
+                    throw new Exception("Não existe nenhum item para ser impresso. Favor adicionar pelo menos um item na tabela.");
+
+                var dtProduto = GerarDadosProdutos();
+                var cliente = new Cliente();
+                cliente.Nome = txtCliente.Text.Trim();
+                frmRelNotaVenda frm = new frmRelNotaVenda(dtProduto, cliente.Nome);
                 frm.ShowDialog();
             }
             catch(Exception ex)
@@ -135,7 +138,7 @@ namespace PastelECia.Cliente
             }
         }
 
-        private DataTable GerarDados()
+        private DataTable GerarDadosProdutos()
         {
             var dt = new DataTable();
 
@@ -178,12 +181,15 @@ namespace PastelECia.Cliente
         {
             try
             {
-                if(dtgVenda.CurrentRow == null)
-                    throw new Exception("Clique um item da tabela para excluir.");
+                if(MessageBox.Show("Deseja realmente tirar o produto da lista?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if(dtgVenda.CurrentRow == null)
+                        throw new Exception("Clique um item da tabela para excluir.");
 
-                lstProdutos.RemoveAt(dtgVenda.CurrentRow.Index);
+                    lstProdutos.RemoveAt(dtgVenda.CurrentRow.Index);
 
-                CarregaGrid(lstProdutos);
+                    CarregaGrid(lstProdutos);
+                }
             }
             catch(Exception ex)
             {
@@ -209,11 +215,15 @@ namespace PastelECia.Cliente
             {
                 btnAdicionar_Click(sender, e);
             }
+            if(e.Control && e.KeyCode == Keys.P)
+            {
+                btnImprimir_Click(sender, e);
+            }
         }
 
         private void frmVenda_Activated(object sender, EventArgs e)
         {
-            cmbProdutos.Focus();
+            txtCliente.Focus();
         }
     }
 }

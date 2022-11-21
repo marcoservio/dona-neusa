@@ -144,7 +144,7 @@ C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\zh-CHS\M
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.csproj.AssemblyReference.cache
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.csproj.SuggestedBindingRedirects.cache
-C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Cliente.frmVenda.resources
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Views.frmVenda.resources
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Properties.Resources.resources
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Relatorios.frmRelNotaVenda.resources
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.csproj.GenerateResource.cache
