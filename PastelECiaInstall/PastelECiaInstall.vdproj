@@ -465,12 +465,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_809D22D390464DDBA933308FC9644B82"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_81AA2FDBAC3B6A367011023247E58032"
         "OwnerKey" = "8:_2B533F60BA244543A5DD307EF2D47477"
         "MsmSig" = "8:_UNDEFINED"
@@ -3927,26 +3921,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_809D22D390464DDBA933308FC9644B82"
-            {
-            "SourcePath" = "8:..\\PastelECia\\bin\\Debug\\config.txt"
-            "TargetName" = "8:config.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_4B9DBED484824B87878F7C96DED715F7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_81AA2FDBAC3B6A367011023247E58032"

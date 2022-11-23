@@ -18,7 +18,7 @@ namespace PastelECia
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                new VersaoSistema(1, 1, 14);
+                new VersaoSistema(1, 1, 15);
 
                 VersaoAvaliacao(true);
 
@@ -39,34 +39,45 @@ namespace PastelECia
         {
             if(ehAvaliacao)
             {
-                var line = LeArquivo();
-
-                if(line.Contains("diaLimiteAcesso:"))
-                    line = line.Replace("diaLimiteAcesso:", "").Trim();
-
+                var parametros = new Parametros();
                 var data = DateTime.MinValue;
-                if(int.TryParse(line.Trim(), out int diaLimiteAcesso))
-                    data = new DateTime(DateTime.Now.Year, DateTime.Now.Month, diaLimiteAcesso, 23, 59, 59);
+
+                if(!File.Exists("config.txt"))
+                    EscreveArquivo("config.txt");
+
+                parametros = LeArquivo("config.txt");
+
+                data = new DateTime(DateTime.Now.Year, DateTime.Now.Month, parametros.DiaLimiteAcesso, 23, 59, 59);
 
                 if(DateTime.Now > data)
                     throw new Exception("Tempo de teste da aplicação acabou! Contacte algum desenvolvedor do sistema para mais informações.");
             }
         }
 
-        private static string LeArquivo()
+        private static Parametros LeArquivo(string caminho)
         {
-            string line = string.Empty;
+            Parametros par = new Parametros();
 
-            using(var fluxoArquivo = new FileStream("config.txt", FileMode.Open))
-            using(var leitor = new StreamReader(fluxoArquivo))
+            using(var fs = new FileStream(caminho, FileMode.Open))
+            using(var leitor = new BinaryReader(fs))
             {
-                while(!leitor.EndOfStream)
-                {
-                    line += leitor.ReadLine();
-                }
+                var nome = leitor.ReadString();
+                par.DiaLimiteAcesso = leitor.ReadInt32();
             }
 
-            return line;
+            return par;
+        }
+
+        private static void EscreveArquivo(string caminho)
+        {
+            int dataLimite = DateTime.Now.Day + 5;
+
+            using(var fs = new FileStream(caminho, FileMode.Create))
+            using(var escritor = new BinaryWriter(fs))
+            {
+                escritor.Write($"diaLimiteAcesso:");
+                escritor.Write(dataLimite);
+            }
         }
     }
 }

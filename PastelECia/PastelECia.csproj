@@ -234,6 +234,7 @@
   <ItemGroup>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\Parametros.cs" />
     <Compile Include="Models\VersaoSistema.cs" />
     <Compile Include="Views\frmVenda.cs">
       <SubType>Form</SubType>
