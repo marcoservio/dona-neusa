@@ -10,6 +10,5 @@ namespace PastelECia.Dados
     {
         List<T> ListarTodos();
         T ListarPor(int id);
-        List<T> ListarPor(string nome);
     }
 }

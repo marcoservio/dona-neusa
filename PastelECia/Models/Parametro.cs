@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace PastelECia.Models
 {
-    public class Parametros
+    public class Parametro
     {
-        public Parametros()
+        public Parametro()
         {
+            Id = 0;
             DiaLimiteAcesso = 0;
             CodigoAtivacao = string.Empty;
         }
 
+        public int Id { get; set; }
         public int DiaLimiteAcesso { get; set; }
         public string CodigoAtivacao { get; set; }
     }

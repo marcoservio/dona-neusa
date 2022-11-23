@@ -11,10 +11,10 @@ namespace PastelECia.Dados.EfCore
         {
             using(var dbContext = new DataContext())
             {
-                var lstProduto = (from produto in dbContext.Produto select produto).ToList();
+                var lstProdutos = (from produto in dbContext.Produto select produto).ToList();
 
-                if(lstProduto != null && lstProduto.Count > 0)
-                    return lstProduto;
+                if(lstProdutos != null && lstProdutos.Count > 0)
+                    return lstProdutos;
 
                 return null;
             }
@@ -37,7 +37,7 @@ namespace PastelECia.Dados.EfCore
         {
             using(var dbContext = new DataContext())
             {
-                var lstProdutos = dbContext.Produto.Where(p => p.Nome_prd == nome).ToList();
+                var lstProdutos = dbContext.Produto.Where(p => p.Nome == nome).ToList();
 
                 if(lstProdutos != null && lstProdutos.Count > 0)
                 {

@@ -1,11 +1,9 @@
-﻿using PastelECia.Views;
-using PastelECia.Models;
+﻿using PastelECia.Models;
+using PastelECia.Views;
 
 using System;
-using System.Windows.Forms;
-using Microsoft.Reporting.Map.WebForms.BingMaps;
 using System.IO;
-using System.Net.Http.Headers;
+using System.Windows.Forms;
 
 namespace PastelECia
 {
@@ -14,35 +12,19 @@ namespace PastelECia
         [STAThread]
         static void Main()
         {
-            //enable-migration - Primeira vez quando o projeto for iniciado
-            //add-migration nome_migration - A cada alteração na classe 
-            //update-database - A cada alteração na classe
-            //Modificar campos da tabela criar a classMap e editar por la seguindo exemplo do ProdutoMap
-            //Ao modelar a classes subir para o banco com os comandos acima
-
-            //Implementar banco para todas as classes
-            //Fazer o maps das classes
-            //Fazer o dao para as classes
-
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
 
                 new VersaoSistema(1, 1, 15);
 
-                //var dbContext = new PastelEntities1();
-
-                //var produtos = dbContext.Produto.Find(1);
-
-                //frmAtivador ativador = new frmAtivador();
-                //ativador.ShowDialog();
-
-                //if(!ativador.ProdutoAtivado)
-
                 VersaoAvaliacao(true);
 
-                using(frmVenda frm = new frmVenda())
-                frm.ShowDialog();
+                using(frmTesteBanco frm = new frmTesteBanco())
+                    frm.ShowDialog();
+
+                //using(frmVenda frm = new frmVenda())
+                //    frm.ShowDialog();
             }
             catch(Exception ex)
             {
@@ -58,7 +40,7 @@ namespace PastelECia
         {
             if(ehAvaliacao)
             {
-                var parametros = new Parametros();
+                var parametros = new Parametro();
                 var data = DateTime.MinValue;
 
                 if(!File.Exists("config.txt"))
@@ -73,9 +55,9 @@ namespace PastelECia
             }
         }
 
-        private static Parametros LeArquivo(string caminho)
+        private static Parametro LeArquivo(string caminho)
         {
-            Parametros par = new Parametros();
+            Parametro par = new Parametro();
 
             using(var fs = new FileStream(caminho, FileMode.Open))
             using(var leitor = new BinaryReader(fs))

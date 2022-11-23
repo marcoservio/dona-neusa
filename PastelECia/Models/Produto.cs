@@ -1,8 +1,5 @@
-﻿using PastelECia.Dados;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace PastelECia.Models
 {
@@ -10,20 +7,20 @@ namespace PastelECia.Models
     {
         public Produto()
         {
-            Nome_prd = string.Empty;
-            Valor_prd = decimal.Zero ;
+            Nome = string.Empty;
+            Valor = decimal.Zero;
             Quantidade = 0;
         }
 
         public int Id { get; set; }
-        public string Nome_prd { get; set; }
-        public decimal Valor_prd { get; set; }
+        public string Nome { get; set; }
+        public decimal Valor { get; set; }
         public int Quantidade { get; set; }
         public decimal ValorTotal
         {
             get
             {
-                return Math.Round(Convert.ToDecimal(Quantidade * Valor_prd), 2);
+                return Math.Round(Convert.ToDecimal(Quantidade * Valor), 2);
             }
         }
 
@@ -33,194 +30,194 @@ namespace PastelECia.Models
 
             var prod = new Produto();
             prod.Id = 1;
-            prod.Nome_prd = "Coxinha";
-            prod.Valor_prd = 2.30M;
+            prod.Nome = "Coxinha";
+            prod.Valor = 2.30M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 2;
-            prod.Nome_prd = "Catupiry";
-            prod.Valor_prd = 2.50M;
+            prod.Nome = "Catupiry";
+            prod.Valor = 2.50M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 3;
-            prod.Nome_prd = "Charuto";
-            prod.Valor_prd = 2.35M;
+            prod.Nome = "Charuto";
+            prod.Valor = 2.35M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 4;
-            prod.Nome_prd = "Salsicha";
-            prod.Valor_prd = 2.15M;
+            prod.Nome = "Salsicha";
+            prod.Valor = 2.15M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 5;
-            prod.Nome_prd = "Bolinha";
-            prod.Valor_prd = 2.35M;
+            prod.Nome = "Bolinha";
+            prod.Valor = 2.35M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 6;
-            prod.Nome_prd = "Pastel de Strogonoff";
-            prod.Valor_prd = 2.35M;
+            prod.Nome = "Pastel de Strogonoff";
+            prod.Valor = 2.35M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 7;
-            prod.Nome_prd = "Pastel de Milho";
-            prod.Valor_prd = 2.30M;
+            prod.Nome = "Pastel de Milho";
+            prod.Valor = 2.30M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 8;
-            prod.Nome_prd = "Pastel de Carne";
-            prod.Valor_prd = 2.35M;
+            prod.Nome = "Pastel de Carne";
+            prod.Valor = 2.35M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 9;
-            prod.Nome_prd = "Pastel de Napolitano";
-            prod.Valor_prd = 2.35M;
+            prod.Nome = "Pastel de Napolitano";
+            prod.Valor = 2.35M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 10;
-            prod.Nome_prd = "Kibe de Carne";
-            prod.Valor_prd = 2.50M;
+            prod.Nome = "Kibe de Carne";
+            prod.Valor = 2.50M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 11;
-            prod.Nome_prd = "Kibe de Requeijão";
-            prod.Valor_prd = 2.50M;
+            prod.Nome = "Kibe de Requeijão";
+            prod.Valor = 2.50M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 12;
-            prod.Nome_prd = "Empada de Frango";
-            prod.Valor_prd = 2.20M;
+            prod.Nome = "Empada de Frango";
+            prod.Valor = 2.20M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 13;
-            prod.Nome_prd = "Empada de Frango com Requeijão";
-            prod.Valor_prd = 2.40M;
+            prod.Nome = "Empada de Frango com Requeijão";
+            prod.Valor = 2.40M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 14;
-            prod.Nome_prd = "Empada de Frango com Bacon";
-            prod.Valor_prd = 2.40M;
+            prod.Nome = "Empada de Frango com Bacon";
+            prod.Valor = 2.40M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 15;
-            prod.Nome_prd = "Empada de Frango com Palmito";
-            prod.Valor_prd = 2.40M;
+            prod.Nome = "Empada de Frango com Palmito";
+            prod.Valor = 2.40M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 16;
-            prod.Nome_prd = "Empada de Milho com Requeijão";
-            prod.Valor_prd = 2.30M;
+            prod.Nome = "Empada de Milho com Requeijão";
+            prod.Valor = 2.30M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 17;
-            prod.Nome_prd = "Empada de Queijo";
-            prod.Valor_prd = 3.00M;
+            prod.Nome = "Empada de Queijo";
+            prod.Valor = 3.00M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 18;
-            prod.Nome_prd = "Pastel Assado";
-            prod.Valor_prd = 2.40M;
+            prod.Nome = "Pastel Assado";
+            prod.Valor = 2.40M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 19;
-            prod.Nome_prd = "Tortinha";
-            prod.Valor_prd = 2.70M;
+            prod.Nome = "Tortinha";
+            prod.Valor = 2.70M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 20;
-            prod.Nome_prd = "Esfirra de Carne";
-            prod.Valor_prd = 2.30M;
+            prod.Nome = "Esfirra de Carne";
+            prod.Valor = 2.30M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 21;
-            prod.Nome_prd = "Esfirra de Frango";
-            prod.Valor_prd = 2.30M;
+            prod.Nome = "Esfirra de Frango";
+            prod.Valor = 2.30M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 22;
-            prod.Nome_prd = "Joelho";
-            prod.Valor_prd = 2.35M;
+            prod.Nome = "Joelho";
+            prod.Valor = 2.35M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 23;
-            prod.Nome_prd = "Hot Dog";
-            prod.Valor_prd = 2.35M;
+            prod.Nome = "Hot Dog";
+            prod.Valor = 2.35M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 24;
-            prod.Nome_prd = "Hambúrguer 10 und";
-            prod.Valor_prd = 3.10M;
+            prod.Nome = "Hambúrguer 10 und";
+            prod.Valor = 3.10M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 25;
-            prod.Nome_prd = "Torta G";
-            prod.Valor_prd = 3.50M;
+            prod.Nome = "Torta G";
+            prod.Valor = 3.50M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 26;
-            prod.Nome_prd = "Cento Congelado 100 und";
-            prod.Valor_prd = 54.90M;
+            prod.Nome = "Cento Congelado 100 und";
+            prod.Valor = 54.90M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 27;
-            prod.Nome_prd = "Cento Frito 100 und";
-            prod.Valor_prd = 2.30M;
+            prod.Nome = "Cento Frito 100 und";
+            prod.Valor = 59.90M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 28;
-            prod.Nome_prd = "Coxinha Media";
-            prod.Valor_prd = 0.80M;
+            prod.Nome = "Coxinha Media";
+            prod.Valor = 0.80M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 29;
-            prod.Nome_prd = "Bolinha Media";
-            prod.Valor_prd = 0.80M;
+            prod.Nome = "Bolinha Media";
+            prod.Valor = 0.80M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 30;
-            prod.Nome_prd = "Empadinha Media";
-            prod.Valor_prd = 0.80M;
+            prod.Nome = "Empadinha Media";
+            prod.Valor = 0.80M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 31;
-            prod.Nome_prd = "Kibinho Media";
-            prod.Valor_prd = 0.80M;
+            prod.Nome = "Kibinho Media";
+            prod.Valor = 0.80M;
             lst.Add(prod);
 
             prod = new Produto();
             prod.Id = 32;
-            prod.Nome_prd = "Salgado Mini Copo (Coxinha, Bolinha) KG";
-            prod.Valor_prd = 20.00M;
+            prod.Nome = "Salgado Mini Copo (Coxinha, Bolinha) KG";
+            prod.Valor = 20.00M;
             lst.Add(prod);
 
             return lst;

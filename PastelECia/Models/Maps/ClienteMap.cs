@@ -15,7 +15,11 @@ namespace PastelECia.Models.Maps
         {
             ToTable("Cliente");
             HasKey(x => x.Id);
-            Property(x => x.Nome).IsRequired().HasColumnName("Nome_cli").HasColumnType("varchar").HasMaxLength(150);
+            Property(x => x.Id).HasColumnName("Id_cli");
+            Property(x => x.Nome).IsRequired().HasColumnName("Nome_cli").HasColumnType("varchar").HasMaxLength(70);
+            Property(x => x.CnpjCpf).IsRequired().HasColumnName("CnpjCpf_cli").HasColumnType("varchar").HasMaxLength(14);
+            Property(x => x.Telefone).HasColumnName("Telefone_cli").HasColumnType("varchar").HasMaxLength(11);
+            Property(x => x.Email).HasColumnName("Email_cli").HasColumnType("varchar").HasMaxLength(50);
         }
     }
 }

@@ -1,11 +1,6 @@
 ﻿using PastelECia.Models.Maps;
 
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PastelECia.Models
 {
@@ -15,11 +10,17 @@ namespace PastelECia.Models
 
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Endereco> Endereco { get; set; }
+        public DbSet<Parametro> Parametro { get; set; }
+        public DbSet<VersaoSistema> VersaoSistema { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ProdutoMap());
             modelBuilder.Configurations.Add(new ClienteMap());
+            modelBuilder.Configurations.Add(new EnderecoMap());
+            modelBuilder.Configurations.Add(new ParametroMap());
+            modelBuilder.Configurations.Add(new VersaoSistemaMap());
         }
     }
 }

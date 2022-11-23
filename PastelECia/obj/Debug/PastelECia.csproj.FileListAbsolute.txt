@@ -173,3 +173,9 @@ C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelEC
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.pastel02.resources
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.pastel03.resources
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.migration04.resources
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.pastel05.resources
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.pastel06.resources
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.pastel07.resources
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.pastel08.resources
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Migrations.pastel09.resources
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Views.frmTesteBanco.resources

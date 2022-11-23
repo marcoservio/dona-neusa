@@ -6,7 +6,7 @@
         {
             Id = 0;
             Locradouro = string.Empty;
-            Numero = string.Empty;
+            Numero = 0;
             Complemento = string.Empty;
             Bairro = string.Empty;
             Cidade = string.Empty;
@@ -17,7 +17,7 @@
 
         public int Id { get; set; }
         public string Locradouro { get; set; }
-        public string Numero { get; set; }
+        public int Numero { get; set; }
         public string Complemento { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }

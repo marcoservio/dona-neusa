@@ -243,9 +243,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dados\EfCore\ClienteDao.cs" />
+    <Compile Include="Dados\EfCore\EnderecoDao.cs" />
+    <Compile Include="Dados\EfCore\ParametroDao.cs" />
     <Compile Include="Dados\EfCore\ProdutoDao.cs" />
+    <Compile Include="Dados\EfCore\VersaoSistemaDao.cs" />
     <Compile Include="Dados\ICommand.cs" />
     <Compile Include="Dados\IQuery.cs" />
+    <Compile Include="Migrations\202211232237551_pastel05.cs" />
+    <Compile Include="Migrations\202211232237551_pastel05.designer.cs">
+      <DependentUpon>202211232237551_pastel05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211232239436_pastel06.cs" />
+    <Compile Include="Migrations\202211232239436_pastel06.designer.cs">
+      <DependentUpon>202211232239436_pastel06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211232252074_pastel07.cs" />
+    <Compile Include="Migrations\202211232252074_pastel07.designer.cs">
+      <DependentUpon>202211232252074_pastel07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211232253423_pastel08.cs" />
+    <Compile Include="Migrations\202211232253423_pastel08.designer.cs">
+      <DependentUpon>202211232253423_pastel08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211232254583_pastel09.cs" />
+    <Compile Include="Migrations\202211232254583_pastel09.designer.cs">
+      <DependentUpon>202211232254583_pastel09.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Maps\ClienteMap.cs" />
     <Compile Include="Migrations\202211231955399_pastel01.cs" />
     <Compile Include="Migrations\202211231955399_pastel01.designer.cs">
@@ -267,7 +291,10 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Dados\EfCore\DataContext.cs" />
     <Compile Include="Models\Endereco.cs" />
-    <Compile Include="Models\Parametros.cs" />
+    <Compile Include="Models\Maps\EnderecoMap.cs" />
+    <Compile Include="Models\Maps\ParametroMap.cs" />
+    <Compile Include="Models\Maps\VersaoSistemaMap.cs" />
+    <Compile Include="Models\Parametro.cs" />
     <Compile Include="Models\Maps\ProdutoMap.cs" />
     <Compile Include="Models\VersaoSistema.cs" />
     <Compile Include="Views\frmAtivador.cs">
@@ -275,6 +302,12 @@
     </Compile>
     <Compile Include="Views\frmAtivador.Designer.cs">
       <DependentUpon>frmAtivador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmTesteBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmTesteBanco.Designer.cs">
+      <DependentUpon>frmTesteBanco.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmVenda.cs">
       <SubType>Form</SubType>
@@ -303,8 +336,26 @@
     <EmbeddedResource Include="Migrations\202211232021514_migration04.resx">
       <DependentUpon>202211232021514_migration04.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211232237551_pastel05.resx">
+      <DependentUpon>202211232237551_pastel05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211232239436_pastel06.resx">
+      <DependentUpon>202211232239436_pastel06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211232252074_pastel07.resx">
+      <DependentUpon>202211232252074_pastel07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211232253423_pastel08.resx">
+      <DependentUpon>202211232253423_pastel08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211232254583_pastel09.resx">
+      <DependentUpon>202211232254583_pastel09.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmAtivador.resx">
       <DependentUpon>frmAtivador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmTesteBanco.resx">
+      <DependentUpon>frmTesteBanco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmVenda.resx">
       <DependentUpon>frmVenda.cs</DependentUpon>

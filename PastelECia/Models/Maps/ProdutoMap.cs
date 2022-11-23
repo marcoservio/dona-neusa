@@ -14,8 +14,9 @@ namespace PastelECia.Models.Maps
             ToTable("Produto");
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnName("Id_prd");
-            Property(x => x.Nome_prd).IsRequired().HasColumnType("varchar").HasMaxLength(150);
-            Property(x => x.Valor_prd).IsRequired().HasColumnType("decimal").HasPrecision(10,2);
+            Property(x => x.Nome).IsRequired().HasColumnName("Nome_prd").HasColumnType("varchar").HasMaxLength(50);
+            Property(x => x.Valor).IsRequired().HasColumnName("Valor_prd").HasColumnType("decimal").HasPrecision(10,2);
+            Property(x => x.Quantidade).HasColumnName("Quantidade_prd").HasColumnType("int");
         }
     }
 }
