@@ -14,11 +14,25 @@ namespace PastelECia
         [STAThread]
         static void Main()
         {
+            //enable-migration - Primeira vez quando o projeto for iniciado
+            //add-migration nome_migration - A cada alteração na classe 
+            //update-database - A cada alteração na classe
+            //Modificar campos da tabela criar a classMap e editar por la seguindo exemplo do ProdutoMap
+            //Ao modelar a classes subir para o banco com os comandos acima
+
+            //Implementar banco para todas as classes
+            //Fazer o maps das classes
+            //Fazer o dao para as classes
+
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
 
                 new VersaoSistema(1, 1, 15);
+
+                //var dbContext = new PastelEntities1();
+
+                //var produtos = dbContext.Produto.Find(1);
 
                 //frmAtivador ativador = new frmAtivador();
                 //ativador.ShowDialog();
@@ -27,7 +41,7 @@ namespace PastelECia
 
                 VersaoAvaliacao(true);
 
-                frmVenda frm = new frmVenda();
+                using(frmVenda frm = new frmVenda())
                 frm.ShowDialog();
             }
             catch(Exception ex)

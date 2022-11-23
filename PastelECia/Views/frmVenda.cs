@@ -32,7 +32,7 @@ namespace PastelECia.Views
         {
             try
             {
-                List<Produto> produtos = new Produto().Produtos();
+                List<Produto> produtos = new Produto().LstProdutos();
 
                 if(produtos == null || produtos.Count == 0)
                     throw new Exception("Não existe nenhum produto cadastrado.");
@@ -94,8 +94,8 @@ namespace PastelECia.Views
                     throw new Exception("Produto inválido.");
 
                 produto.Id++;
-                produto.Nome = combo.Nome;
-                produto.Valor = combo.Valor;
+                produto.Nome_prd = combo.Nome_prd;
+                produto.Valor_prd = combo.Valor_prd;
                 produto.Quantidade = Convert.ToInt32(txtQuantidade.Text.Trim());
 
                 if(produto == null)

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PastelModelStoreContainer" CdmEntityContainer="PastelEntities1">
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="PastelModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome_prd" ColumnName="Nome_prd" />
+          <ScalarProperty Name="Valor_prd" ColumnName="Valor_prd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
