@@ -152,3 +152,4 @@ C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelEC
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.csproj.CopyComplete
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.exe
 C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.pdb
+C:\Users\marco\OneDrive\git-marcoservio\PastelECia\PastelECia\obj\Debug\PastelECia.Views.frmAtivador.resources

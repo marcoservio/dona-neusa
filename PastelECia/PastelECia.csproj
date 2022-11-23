@@ -236,6 +236,12 @@
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Parametros.cs" />
     <Compile Include="Models\VersaoSistema.cs" />
+    <Compile Include="Views\frmAtivador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmAtivador.Designer.cs">
+      <DependentUpon>frmAtivador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,9 @@
       <DependentUpon>frmRelNotaVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Produto.cs" />
+    <EmbeddedResource Include="Views\frmAtivador.resx">
+      <DependentUpon>frmAtivador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmVenda.resx">
       <DependentUpon>frmVenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +311,7 @@
     <Content Include="Images\icons8-add-new-32.png" />
     <Content Include="Images\icons8-calculator-32.png" />
     <Content Include="Images\icons8-close-window-32.png" />
+    <Content Include="Images\icons8-ok-32.png" />
     <Content Include="Images\icons8-remove-32.png" />
     <Content Include="Images\icons8-send-to-printer-32.png" />
     <Content Include="Images\Icons\ExibirRelatorio.ico" />

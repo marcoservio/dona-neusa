@@ -6265,7 +6265,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_4B9DBED484824B87878F7C96DED715F7"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:C:\\Pastel & CIA"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
@@ -6324,15 +6324,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Pastel & CIA"
-        "ProductCode" = "8:{9CB2C5D1-BE66-4DA3-9BB8-444ECA0D86A7}"
-        "PackageCode" = "8:{B56C793C-6893-4128-97FA-93F3D6A54A2F}"
+        "ProductCode" = "8:{E55150F2-3FA8-4F6C-8B9F-C447AB57FC5C}"
+        "PackageCode" = "8:{3CFE28C0-0BDA-44C5-8981-8CAED99F626B}"
         "UpgradeCode" = "8:{A6CFA5B3-61F1-4794-83AF-BA3111764D96}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.14"
+        "ProductVersion" = "8:1.1.15"
         "Manufacturer" = "8:MM Corporation"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -6445,6 +6445,48 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_412259C4B3E1418FA852AB849AFEACE4"
+            {
+            "Name" = "8:Pastel & CIA"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_2B533F60BA244543A5DD307EF2D47477"
+            "Folder" = "8:_8B6562C65B5D480A9FBEB2F997B47100"
+            "WorkingFolder" = "8:_4B9DBED484824B87878F7C96DED715F7"
+            "Icon" = "8:_85504FD114AF42DE93B7D5324D0A946A"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_962877E5AC6B4991A79F30880D194554"
+            {
+            "Name" = "8:Pastel & CIA"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_2B533F60BA244543A5DD307EF2D47477"
+            "Folder" = "8:_9560231A8FDD44EFB3C355224D5F6A6E"
+            "WorkingFolder" = "8:_4B9DBED484824B87878F7C96DED715F7"
+            "Icon" = "8:_85504FD114AF42DE93B7D5324D0A946A"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DEB1FCC25079425891F14355CA431A64"
+            {
+            "Name" = "8:Pastel & CIA"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_2B533F60BA244543A5DD307EF2D47477"
+            "Folder" = "8:_4B9DBED484824B87878F7C96DED715F7"
+            "WorkingFolder" = "8:"
+            "Icon" = "8:_85504FD114AF42DE93B7D5324D0A946A"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

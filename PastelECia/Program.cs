@@ -20,6 +20,11 @@ namespace PastelECia
 
                 new VersaoSistema(1, 1, 15);
 
+                //frmAtivador ativador = new frmAtivador();
+                //ativador.ShowDialog();
+
+                //if(!ativador.ProdutoAtivado)
+
                 VersaoAvaliacao(true);
 
                 frmVenda frm = new frmVenda();
@@ -43,7 +48,7 @@ namespace PastelECia
                 var data = DateTime.MinValue;
 
                 if(!File.Exists("config.txt"))
-                    EscreveArquivo("config.txt");
+                    CriaArquivo("config.txt");
 
                 parametros = LeArquivo("config.txt");
 
@@ -68,7 +73,7 @@ namespace PastelECia
             return par;
         }
 
-        private static void EscreveArquivo(string caminho)
+        private static void CriaArquivo(string caminho)
         {
             int dataLimite = DateTime.Now.Day + 5;
 
