@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\Icons\icons8-banknotes-32.ico</ApplicationIcon>
+    <ApplicationIcon>Images\Icons\logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Caelum.Stella.CSharp, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
@@ -247,67 +247,64 @@
     <Compile Include="Dados\EfCore\EnderecoDao.cs" />
     <Compile Include="Dados\EfCore\ParametroDao.cs" />
     <Compile Include="Dados\EfCore\ProdutoDao.cs" />
+    <Compile Include="Dados\EfCore\UnidadeMedidaDao.cs" />
     <Compile Include="Dados\EfCore\VersaoSistemaDao.cs" />
     <Compile Include="Dados\ICommand.cs" />
     <Compile Include="Dados\IQuery.cs" />
-    <Compile Include="Migrations\202211232237551_pastel05.cs" />
-    <Compile Include="Migrations\202211232237551_pastel05.designer.cs">
-      <DependentUpon>202211232237551_pastel05.cs</DependentUpon>
+    <Compile Include="Migrations\202211281222489_Novo banco.cs" />
+    <Compile Include="Migrations\202211281222489_Novo banco.designer.cs">
+      <DependentUpon>202211281222489_Novo banco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202211232239436_pastel06.cs" />
-    <Compile Include="Migrations\202211232239436_pastel06.designer.cs">
-      <DependentUpon>202211232239436_pastel06.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211232252074_pastel07.cs" />
-    <Compile Include="Migrations\202211232252074_pastel07.designer.cs">
-      <DependentUpon>202211232252074_pastel07.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211232253423_pastel08.cs" />
-    <Compile Include="Migrations\202211232253423_pastel08.designer.cs">
-      <DependentUpon>202211232253423_pastel08.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211232254583_pastel09.cs" />
-    <Compile Include="Migrations\202211232254583_pastel09.designer.cs">
-      <DependentUpon>202211232254583_pastel09.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Enum\Enumerador.cs" />
     <Compile Include="Models\Maps\ClienteMap.cs" />
-    <Compile Include="Migrations\202211231955399_pastel01.cs" />
-    <Compile Include="Migrations\202211231955399_pastel01.designer.cs">
-      <DependentUpon>202211231955399_pastel01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211232004107_pastel02.cs" />
-    <Compile Include="Migrations\202211232004107_pastel02.designer.cs">
-      <DependentUpon>202211232004107_pastel02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211232010490_pastel03.cs" />
-    <Compile Include="Migrations\202211232010490_pastel03.designer.cs">
-      <DependentUpon>202211232010490_pastel03.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211232021514_migration04.cs" />
-    <Compile Include="Migrations\202211232021514_migration04.designer.cs">
-      <DependentUpon>202211232021514_migration04.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Dados\EfCore\DataContext.cs" />
+    <Compile Include="Dados\EfCore\AppDbContext.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Maps\EnderecoMap.cs" />
     <Compile Include="Models\Maps\ParametroMap.cs" />
+    <Compile Include="Models\Maps\UnidadeMedidaMap.cs" />
     <Compile Include="Models\Maps\VersaoSistemaMap.cs" />
+    <Compile Include="Models\IModelo.cs" />
     <Compile Include="Models\Parametro.cs" />
     <Compile Include="Models\Maps\ProdutoMap.cs" />
+    <Compile Include="Models\UnidadeMedida.cs" />
     <Compile Include="Models\VersaoSistema.cs" />
-    <Compile Include="Views\frmAtivador.cs">
+    <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\EnderecoService.cs" />
+    <Compile Include="Services\ParametroService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\UnidadeMedidaService.cs" />
+    <Compile Include="Services\VersaoSistemaService.cs" />
+    <Compile Include="Views\Ancestral\frmAncestral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Ancestral\frmAncestral.Designer.cs">
+      <DependentUpon>frmAncestral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cadastro\frmCadastroProduto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Cadastro\frmCadastroProduto.Designer.cs">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmAtivador.Designer.cs">
-      <DependentUpon>frmAtivador.cs</DependentUpon>
+    <Compile Include="Views\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmTesteBanco.cs">
+    <Compile Include="Views\frmSobre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmTesteBanco.Designer.cs">
-      <DependentUpon>frmTesteBanco.cs</DependentUpon>
+    <Compile Include="Views\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TesteCodigo\frmTesteCodigo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TesteCodigo\frmTesteCodigo.Designer.cs">
+      <DependentUpon>frmTesteCodigo.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmVenda.cs">
       <SubType>Form</SubType>
@@ -324,38 +321,24 @@
       <DependentUpon>frmRelNotaVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Produto.cs" />
-    <EmbeddedResource Include="Migrations\202211231955399_pastel01.resx">
-      <DependentUpon>202211231955399_pastel01.cs</DependentUpon>
+    <Compile Include="Views\Utilitarios\IMethodsModel.cs" />
+    <EmbeddedResource Include="Migrations\202211281222489_Novo banco.resx">
+      <DependentUpon>202211281222489_Novo banco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232004107_pastel02.resx">
-      <DependentUpon>202211232004107_pastel02.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Ancestral\frmAncestral.resx">
+      <DependentUpon>frmAncestral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232010490_pastel03.resx">
-      <DependentUpon>202211232010490_pastel03.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Cadastro\frmCadastroProduto.resx">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232021514_migration04.resx">
-      <DependentUpon>202211232021514_migration04.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232237551_pastel05.resx">
-      <DependentUpon>202211232237551_pastel05.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232239436_pastel06.resx">
-      <DependentUpon>202211232239436_pastel06.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232252074_pastel07.resx">
-      <DependentUpon>202211232252074_pastel07.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232253423_pastel08.resx">
-      <DependentUpon>202211232253423_pastel08.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211232254583_pastel09.resx">
-      <DependentUpon>202211232254583_pastel09.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmAtivador.resx">
-      <DependentUpon>frmAtivador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmTesteBanco.resx">
-      <DependentUpon>frmTesteBanco.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TesteCodigo\frmTesteCodigo.resx">
+      <DependentUpon>frmTesteCodigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmVenda.resx">
       <DependentUpon>frmVenda.cs</DependentUpon>
@@ -368,6 +351,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\frmRelNotaVenda.resx">
       <DependentUpon>frmRelNotaVenda.cs</DependentUpon>
@@ -405,18 +389,43 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\icons8-add-new-32.png" />
-    <Content Include="Images\icons8-calculator-32.png" />
-    <Content Include="Images\icons8-close-window-32.png" />
-    <Content Include="Images\icons8-ok-32.png" />
-    <Content Include="Images\icons8-remove-32.png" />
-    <Content Include="Images\icons8-send-to-printer-32.png" />
-    <Content Include="Images\Icons\ExibirRelatorio.ico" />
-    <Content Include="Images\Icons\Fábrica.ico" />
-    <Content Include="Images\Icons\icons8-banknotes-32.ico" />
+    <Content Include="Images\cancelPadrao.png" />
+    <Content Include="Images\clean.png" />
+    <Content Include="Images\deletePadrao.png" />
+    <Content Include="Images\Icons\about.ico" />
+    <Content Include="Images\Icons\hotDog.ico" />
+    <Content Include="Images\Icons\logo.ico" />
+    <Content Include="Images\Icons\pastel.ico" />
+    <Content Include="Images\Icons\exibirRelatorio.ico" />
+    <Content Include="Images\Icons\fabrica.ico" />
+    <Content Include="Images\Icons\bankNotes.ico" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\okPadrao.png" />
+    <Content Include="Images\Old Icons\about.png" />
+    <Content Include="Images\Old Icons\account.png" />
+    <Content Include="Images\Old Icons\addNew.png" />
+    <Content Include="Images\Old Icons\adressBook.png" />
+    <Content Include="Images\Old Icons\calculator.png" />
+    <Content Include="Images\Old Icons\cash.png" />
+    <Content Include="Images\Old Icons\close.png" />
+    <Content Include="Images\Old Icons\fillForm.png" />
+    <Content Include="Images\Old Icons\hotDog.png" />
+    <Content Include="Images\Old Icons\money.png" />
+    <Content Include="Images\Old Icons\ok.png" />
+    <Content Include="Images\Old Icons\pastel.png" />
+    <Content Include="Images\Old Icons\remove.png" />
+    <Content Include="Images\Old Icons\search.png" />
+    <Content Include="Images\Old Icons\sell.png" />
+    <Content Include="Images\Old Icons\sendPrinter.png" />
+    <Content Include="Images\Old Icons\streetFood.png" />
+    <Content Include="pastel.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Consulta\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />

@@ -24,8 +24,19 @@ namespace PastelECia.Views
             {
                 ResetGrid();
                 CarregarComboProdutos();
-
             }
+        }
+
+        private void DesenhaGrid()
+        {
+            dtgVenda.Columns["DataAlteracao"].Visible = false;
+            dtgVenda.Columns["Descricao"].Visible = false;
+            dtgVenda.Columns["Inativo"].Visible = false;
+            dtgVenda.Columns["Id"].Visible = false;
+            dtgVenda.Columns["UnidadeMedidaId"].Visible = false;
+            dtgVenda.Columns["UnidadeMedida"].Visible = false;
+            dtgVenda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dtgVenda.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void CarregarComboProdutos()
@@ -70,9 +81,7 @@ namespace PastelECia.Views
             if(produtos != null && produtos.Count > 0)
             {
                 dtgVenda.DataSource = lstProdutos;
-                dtgVenda.Columns["Id"].Visible = false;
-                dtgVenda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                dtgVenda.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                DesenhaGrid();
             }
             else
                 ControleCampos(false);
@@ -228,8 +237,18 @@ namespace PastelECia.Views
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
-            Dispose();
+            Application.Exit();
+        }
+
+        private void btnLimapr_Click(object sender, EventArgs e)
+        {
+            ResetGrid();
+            txtCliente.Text = string.Empty;
+            txtQuantidade.Text = string.Empty;
+            txtValorTotalVenda.Text = string.Empty;
+            lstProdutos = new List<Produto>();
+            cmbProdutos.SelectedIndex = 0;
+            ControleCampos(false);
         }
     }
 }

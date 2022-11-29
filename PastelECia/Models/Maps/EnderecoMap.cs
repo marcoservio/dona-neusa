@@ -17,6 +17,8 @@ namespace PastelECia.Models.Maps
             Property(x => x.Pais).IsRequired().HasColumnName("Pais_end").HasColumnType("varchar").HasMaxLength(40);
             Property(x => x.Estado).IsRequired().HasColumnName("Estado_end").HasColumnType("varchar").HasMaxLength(60);
             Property(x => x.Cep).IsRequired().HasColumnName("Cep_end").HasColumnType("varchar").HasMaxLength(8);
+            Property(x => x.DataAlteracao).IsRequired().HasColumnName("DataAlteracao_end").HasColumnType("datetime");
+            Property(x => x.Inativo).IsRequired().HasColumnName("Inativo_end");
         }
     }
 }

@@ -1,10 +1,8 @@
 ﻿using PastelECia.Models;
 
-using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PastelECia.Dados.EfCore
 {
@@ -12,63 +10,49 @@ namespace PastelECia.Dados.EfCore
     {
         public List<Parametro> ListarTodos()
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var lstParametros = (from parametro in dbContext.Parametro select parametro).ToList();
-
-                if(lstParametros != null && lstParametros.Count > 0)
-                    return lstParametros;
-
-                return null;
+                return _context.Parametro.ToList();
             }
         }
 
-        public Parametro ListarPor(int id)
+        public Parametro BuscarPor(int id)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var parametro = dbContext.Parametro.Find(id);
-
-                if(parametro != null)
-                    return parametro;
-
-                return null;
+                return _context.Parametro.Find(id);
             }
         }
 
         public void Incluir(Parametro parametro)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                if(parametro.Id == 0)
-                    dbContext.Parametro.Add(parametro);
-
-                dbContext.SaveChanges();
+                _context.Parametro.Add(parametro);
+                _context.SaveChanges();
             }
         }
 
         public void Alterar(Parametro parametro)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                if(parametro.Id != 0)
-                    dbContext.Entry(parametro).State = System.Data.Entity.EntityState.Modified;
-
-                dbContext.SaveChanges();
+                _context.Entry(parametro).State = EntityState.Modified;
+                _context.SaveChanges();
             }
         }
 
         public void Excluir(Parametro parametro)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var entry = dbContext.Entry(parametro);
+                var entry = _context.Entry(parametro);
 
-                if(entry.State == System.Data.Entity.EntityState.Detached)
-                    dbContext.Parametro.Attach(parametro);
+                if(entry.State == EntityState.Detached)
+                    _context.Parametro.Attach(parametro);
 
-                dbContext.Parametro.Remove(parametro);
-                dbContext.SaveChanges();
+                _context.Parametro.Remove(parametro);
+                _context.SaveChanges();
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using PastelECia.Models;
 
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace PastelECia.Dados.EfCore
@@ -9,78 +10,57 @@ namespace PastelECia.Dados.EfCore
     {
         public List<Produto> ListarTodos()
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var lstProdutos = (from produto in dbContext.Produto select produto).ToList();
-
-                if(lstProdutos != null && lstProdutos.Count > 0)
-                    return lstProdutos;
-
-                return null;
+                return _context.Produto.Include(p => p.UnidadeMedida).ToList();
             }
         }
 
-        public Produto ListarPor(int id)
+        public Produto BuscarPor(int id)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var produto = dbContext.Produto.Find(id);
-
-                if(produto != null)
-                    return produto;
-
-                return null;
+                return _context.Produto.Find(id);
             }
         }
 
         public List<Produto> ListarPor(string nome)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var lstProdutos = dbContext.Produto.Where(p => p.Nome == nome).ToList();
-
-                if(lstProdutos != null && lstProdutos.Count > 0)
-                {
-                    return lstProdutos;
-                }
-
-                return null;
+                return _context.Produto.Where(p => p.Nome.Contains(nome)).ToList();
             }
         }
 
         public void Incluir(Produto produto)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                if(produto.Id == 0)
-                    dbContext.Produto.Add(produto);
-
-                dbContext.SaveChanges();
+                _context.Produto.Add(produto);
+                _context.SaveChanges();
             }
         }
 
         public void Alterar(Produto produto)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                if(produto.Id != 0)
-                    dbContext.Entry(produto).State = System.Data.Entity.EntityState.Modified;
-
-                dbContext.SaveChanges();
+                _context.Entry(produto).State = EntityState.Modified;
+                _context.SaveChanges();
             }
         }
 
         public void Excluir(Produto produto)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var entry = dbContext.Entry(produto);
+                var entry = _context.Entry(produto);
 
-                if(entry.State == System.Data.Entity.EntityState.Detached)
-                    dbContext.Produto.Attach(produto);
+                if(entry.State == EntityState.Detached)
+                    _context.Produto.Attach(produto);
 
-                dbContext.Produto.Remove(produto);
-                dbContext.SaveChanges();
+                _context.Produto.Remove(produto);
+                _context.SaveChanges();
             }
         }
     }

@@ -12,6 +12,8 @@ namespace PastelECia.Models.Maps
             Property(x => x.VersaoSis).IsRequired().HasColumnName("VersaoSistema_vsi").HasColumnType("int");
             Property(x => x.VersaoBanco).IsRequired().HasColumnName("VersaoBanco_vsi").HasColumnType("int");
             Property(x => x.Revisao).IsRequired().HasColumnName("Revisao_vsi").HasColumnType("int");
+            Property(x => x.DataAlteracao).IsRequired().HasColumnName("DataAlteracao_vsi").HasColumnType("datetime");
+            Property(x => x.Inativo).IsRequired().HasColumnName("Inativo_vsi");
         }
     }
 }

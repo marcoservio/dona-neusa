@@ -1,10 +1,12 @@
-﻿namespace PastelECia.Models
+﻿using static PastelECia.Models.Enum.Enumerador;
+using System;
+
+namespace PastelECia.Models
 {
-    public class Endereco
+    public class Endereco : IModelo
     {
         public Endereco()
         {
-            Id = 0;
             Locradouro = string.Empty;
             Numero = 0;
             Complemento = string.Empty;
@@ -13,6 +15,8 @@
             Pais = string.Empty;
             Estado = string.Empty;
             Cep = string.Empty;
+            Inativo = SimNao.N;
+            DataAlteracao = DateTime.Now;
         }
 
         public int Id { get; set; }
@@ -24,5 +28,7 @@
         public string Pais { get; set; }
         public string Estado { get; set; }
         public string Cep { get; set; }
+        public SimNao Inativo { get; set; }
+        public DateTime DataAlteracao { get; set; }
     }
 }

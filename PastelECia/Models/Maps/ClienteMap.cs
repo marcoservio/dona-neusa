@@ -20,6 +20,8 @@ namespace PastelECia.Models.Maps
             Property(x => x.CnpjCpf).IsRequired().HasColumnName("CnpjCpf_cli").HasColumnType("varchar").HasMaxLength(14);
             Property(x => x.Telefone).HasColumnName("Telefone_cli").HasColumnType("varchar").HasMaxLength(11);
             Property(x => x.Email).HasColumnName("Email_cli").HasColumnType("varchar").HasMaxLength(50);
+            Property(x => x.DataAlteracao).IsRequired().HasColumnName("DataAlteracao_cli").HasColumnType("datetime");
+            Property(x => x.Inativo).IsRequired().HasColumnName("Inativo_cli");
         }
     }
 }

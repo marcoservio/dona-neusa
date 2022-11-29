@@ -1,6 +1,7 @@
 ﻿using PastelECia.Models;
 
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace PastelECia.Dados.EfCore
@@ -9,63 +10,49 @@ namespace PastelECia.Dados.EfCore
     {
         public List<Endereco> ListarTodos()
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var lstEnderecos = (from endereco in dbContext.Endereco select endereco).ToList();
-
-                if(lstEnderecos != null && lstEnderecos.Count > 0)
-                    return lstEnderecos;
-
-                return null;
+                return _context.Endereco.ToList();
             }
         }
 
-        public Endereco ListarPor(int id)
+        public Endereco BuscarPor(int id)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var endereco = dbContext.Endereco.Find(id);
-
-                if(endereco != null)
-                    return endereco;
-
-                return null;
+                return _context.Endereco.Find(id);
             }
         }
 
         public void Incluir(Endereco endereco)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                if(endereco.Id == 0)
-                    dbContext.Endereco.Add(endereco);
-
-                dbContext.SaveChanges();
+                _context.Endereco.Add(endereco);
+                _context.SaveChanges();
             }
         }
 
         public void Alterar(Endereco endereco)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                if(endereco.Id != 0)
-                    dbContext.Entry(endereco).State = System.Data.Entity.EntityState.Modified;
-
-                dbContext.SaveChanges();
+                _context.Entry(endereco).State = EntityState.Modified;
+                _context.SaveChanges();
             }
         }
 
         public void Excluir(Endereco endereco)
         {
-            using(var dbContext = new DataContext())
+            using(var _context = new AppDbContext())
             {
-                var entry = dbContext.Entry(endereco);
+                var entry = _context.Entry(endereco);
 
-                if(entry.State == System.Data.Entity.EntityState.Detached)
-                    dbContext.Endereco.Attach(endereco);
+                if(entry.State == EntityState.Detached)
+                    _context.Endereco.Attach(endereco);
 
-                dbContext.Endereco.Remove(endereco);
-                dbContext.SaveChanges();
+                _context.Endereco.Remove(endereco);
+                _context.SaveChanges();
             }
         }
     }

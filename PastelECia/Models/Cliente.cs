@@ -1,15 +1,18 @@
-﻿namespace PastelECia.Models
+﻿using static PastelECia.Models.Enum.Enumerador;
+using System;
+
+namespace PastelECia.Models
 {
-    public class Cliente
+    public class Cliente : IModelo
     {
         public Cliente()
         {
-            Id = 0;
             Nome = string.Empty;
             CnpjCpf = string.Empty;
             Telefone = string.Empty;
             Email = string.Empty;
-            Endereco = new Endereco();
+            Inativo = SimNao.N;
+            DataAlteracao = DateTime.Now;
         }
 
         public int Id { get; set; }
@@ -17,6 +20,9 @@
         public string CnpjCpf { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
+        public int EnderecoId { get; set; }
         public Endereco Endereco { get; set; }
+        public SimNao Inativo { get; set; }
+        public DateTime DataAlteracao { get; set; }
     }
 }

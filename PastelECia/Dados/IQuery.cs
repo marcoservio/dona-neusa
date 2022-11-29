@@ -9,6 +9,6 @@ namespace PastelECia.Dados
     internal interface IQuery<T>
     {
         List<T> ListarTodos();
-        T ListarPor(int id);
+        T BuscarPor(int id);
     }
 }

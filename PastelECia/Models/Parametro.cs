@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using static PastelECia.Models.Enum.Enumerador;
 
 namespace PastelECia.Models
 {
-    public class Parametro
+    public class Parametro : IModelo
     {
         public Parametro()
         {
-            Id = 0;
-            DiaLimiteAcesso = 0;
+            DataLimiteAcesso = DateTime.MaxValue;
             CodigoAtivacao = string.Empty;
+            Inativo = SimNao.N;
+            DataAlteracao = DateTime.Now;
         }
 
         public int Id { get; set; }
-        public int DiaLimiteAcesso { get; set; }
+        public DateTime DataLimiteAcesso { get; set; }
         public string CodigoAtivacao { get; set; }
+        public SimNao Inativo { get; set; }
+        public DateTime DataAlteracao { get; set; }
     }
 }

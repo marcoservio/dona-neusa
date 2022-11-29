@@ -1,4 +1,5 @@
 ﻿using PastelECia.Models;
+using PastelECia.Services;
 using PastelECia.Views;
 
 using System;
@@ -9,22 +10,22 @@ namespace PastelECia
 {
     public static class Program
     {
+        private static VersaoSistemaService _service = new VersaoSistemaService();
+
         [STAThread]
         static void Main()
         {
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-
-                new VersaoSistema(1, 1, 15);
+                
+                //ControleVersaoSistema();
 
                 VersaoAvaliacao(true);
 
-                using(frmTesteBanco frm = new frmTesteBanco())
-                    frm.ShowDialog();
-
-                //using(frmVenda frm = new frmVenda())
-                //    frm.ShowDialog();
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new frmVenda());
             }
             catch(Exception ex)
             {
@@ -34,6 +35,19 @@ namespace PastelECia
             {
                 Cursor.Current = Cursors.Default;
             }
+        }
+
+        private static void ControleVersaoSistema()
+        {
+            VersaoSistema versao = new VersaoSistema();
+            versao.VersaoSis = 1;
+            versao.VersaoBanco = 1;
+            versao.Revisao = 16;
+
+            var tmp = _service.BuscarUltimaVersao();
+
+            if(tmp != null || tmp.VersaoSis != versao.VersaoSis || tmp.VersaoBanco != versao.VersaoBanco || tmp.Revisao != versao.Revisao)
+                _service.Incluir(versao);
         }
 
         private static void VersaoAvaliacao(bool ehAvaliacao)
@@ -48,7 +62,7 @@ namespace PastelECia
 
                 parametros = LeArquivo("config.txt");
 
-                data = new DateTime(DateTime.Now.Year, DateTime.Now.Month, parametros.DiaLimiteAcesso, 23, 59, 59);
+                data = parametros.DataLimiteAcesso;
 
                 if(DateTime.Now > data)
                     throw new Exception("Tempo de teste da aplicação acabou! Contacte algum desenvolvedor do sistema para mais informações.");
@@ -63,7 +77,7 @@ namespace PastelECia
             using(var leitor = new BinaryReader(fs))
             {
                 var nome = leitor.ReadString();
-                par.DiaLimiteAcesso = leitor.ReadInt32();
+                par.DataLimiteAcesso = Convert.ToDateTime(leitor.ReadString());
             }
 
             return par;
@@ -71,13 +85,13 @@ namespace PastelECia
 
         private static void CriaArquivo(string caminho)
         {
-            int dataLimite = DateTime.Now.Day + 5;
+            DateTime dataLimite = DateTime.Now.AddDays(5);
 
             using(var fs = new FileStream(caminho, FileMode.Create))
             using(var escritor = new BinaryWriter(fs))
             {
                 escritor.Write($"diaLimiteAcesso:");
-                escritor.Write(dataLimite);
+                escritor.Write(dataLimite.ToString());
             }
         }
     }

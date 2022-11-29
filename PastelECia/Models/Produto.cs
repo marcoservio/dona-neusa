@@ -1,21 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+using static PastelECia.Models.Enum.Enumerador;
 
 namespace PastelECia.Models
 {
-    public class Produto
+    public class Produto : IModelo
     {
         public Produto()
         {
             Nome = string.Empty;
+            Descricao = string.Empty;
             Valor = decimal.Zero;
             Quantidade = 0;
+            Inativo = SimNao.N;
+            DataAlteracao = DateTime.Now;
         }
 
         public int Id { get; set; }
         public string Nome { get; set; }
+        public string Descricao { get; set; }
         public decimal Valor { get; set; }
         public int Quantidade { get; set; }
+        public int UnidadeMedidaId { get; set; }
+        public virtual UnidadeMedida UnidadeMedida { get; set; }
+        public SimNao Inativo { get; set; }
+        public DateTime DataAlteracao { get; set; }
+
+        [NotMapped]
         public decimal ValorTotal
         {
             get
