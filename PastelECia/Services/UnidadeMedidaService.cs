@@ -2,11 +2,7 @@
 using PastelECia.Dados.EfCore;
 using PastelECia.Models;
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PastelECia.Services
 {
@@ -16,27 +12,62 @@ namespace PastelECia.Services
 
         public void Alterar(UnidadeMedida obj)
         {
-            _dao.Alterar(obj);
+            try
+            {
+                _dao.Alterar(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public UnidadeMedida BuscarPor(int id)
         {
-            return _dao.BuscarPor(id);
+            try
+            {
+                return _dao.BuscarPor(id);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Excluir(UnidadeMedida obj)
         {
-            _dao.Excluir(obj);
+            try
+            {
+                _dao.Excluir(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Incluir(UnidadeMedida obj)
         {
-            _dao.Incluir(obj);
+            try
+            {
+                _dao.Incluir(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public List<UnidadeMedida> ListarTodos()
         {
-            return _dao.ListarTodos();
+            try
+            {
+                return _dao.ListarTodos();
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

@@ -15,37 +15,86 @@ namespace PastelECia.Services
 
         public List<Produto> ListarTodos()
         {
-            return _dao.ListarTodos();
+            try
+            {
+                return _dao.ListarTodos();
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public Produto BuscarPor(int id)
         {
-            return _dao.BuscarPor(id);
+            try
+            {
+                return _dao.BuscarPor(id);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public List<Produto> ListarPor(string nome)
         {
-            return _dao.ListarPor(nome);
+            try
+            {
+                return _dao.ListarPor(nome);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public List<Produto> ListarTodosAtivos()
         {
-            return _dao.ListarTodos().Where(p => p.Inativo != SimNao.S).ToList();
+            try
+            {
+                return _dao.ListarTodos().Where(p => p.Inativo != SimNao.S).ToList();
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Incluir(Produto produto)
         {
-            _dao.Incluir(produto);
+            try
+            {
+                _dao.Incluir(produto);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Alterar(Produto produto)
         {
-            _dao.Alterar(produto);
+            try
+            {
+                _dao.Alterar(produto);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Excluir(Produto produto)
         {
-            _dao.Excluir(produto);
+            try
+            {
+                _dao.Excluir(produto);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

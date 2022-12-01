@@ -13,32 +13,74 @@ namespace PastelECia.Services
 
         public void Alterar(VersaoSistema obj)
         {
-            _dao.Alterar(obj);
+            try
+            {
+                _dao.Alterar(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public VersaoSistema BuscarPor(int id)
         {
-            return _dao.BuscarPor(id);
+            try
+            {
+                return _dao.BuscarPor(id);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Excluir(VersaoSistema obj)
         {
-            _dao.Excluir(obj);
+            try
+            {
+                _dao.Excluir(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Incluir(VersaoSistema obj)
         {
-            _dao.Incluir(obj);
+            try
+            {
+                _dao.Incluir(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public List<VersaoSistema> ListarTodos()
         {
-            return _dao.ListarTodos();
+            try
+            {
+                return _dao.ListarTodos();
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public VersaoSistema BuscarUltimaVersao()
         {
-            return _dao.ListarTodos().OrderByDescending(s => s.Id).First();
+            try
+            {
+                return _dao.ListarTodos().OrderByDescending(s => s.Id).First();
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

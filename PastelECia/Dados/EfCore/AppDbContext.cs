@@ -1,8 +1,6 @@
 ﻿using PastelECia.Models.Maps;
 
 using System.Data.Entity;
-using System.Reflection;
-using System.Security.Policy;
 
 namespace PastelECia.Models
 {

@@ -126,7 +126,7 @@ namespace PastelECia.Views
             dtgTeste.Update();
         }
 
-        private void TxtSomenteNumeroKeyPress(object sender, KeyPressEventArgs e)
+        public void TxtSomenteNumeroKeyPress(object sender, KeyPressEventArgs e)
         {
             if(!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
@@ -134,28 +134,28 @@ namespace PastelECia.Views
             }
         }
 
-        private void TxtDecimalLeave(object sender, EventArgs e)
+        public void TxtDecimalLeave(object sender, EventArgs e, TextBox txt)
         {
             try
             {
-                if(txtValor.Text.Contains(",") == false)
+                if(txt.Text.Contains(",") == false)
                 {
-                    txtValor.Text += ",00";
+                    txt.Text += ",00";
                 }
                 else
                 {
-                    if(txtValor.Text.IndexOf(",") == txtValor.Text.Length - 1)
+                    if(txt.Text.IndexOf(",") == txt.Text.Length - 1)
                     {
-                        txtValor.Text += "00";
+                        txt.Text += "00";
                     }
                 }
                 try
                 {
-                    double d = Convert.ToDouble(txtValor.Text);
+                    double d = Convert.ToDouble(txt.Text);
                 }
                 catch
                 {
-                    txtValor.Text = "0,00";
+                    txt.Text = "0,00";
                 }
             }
             catch(Exception ex)
@@ -164,7 +164,7 @@ namespace PastelECia.Views
             }
         }
 
-        private void TxtDecimalKeyPress(object sender, KeyPressEventArgs e)
+        public void TxtDecimalKeyPress(object sender, KeyPressEventArgs e, TextBox txt)
         {
             try
             {
@@ -174,7 +174,7 @@ namespace PastelECia.Views
                 }
                 if(e.KeyChar == '.' || e.KeyChar == ',')
                 {
-                    if(!txtValor.Text.Contains(","))
+                    if(!txt.Text.Contains(","))
                     {
                         e.KeyChar = ',';
                     }
@@ -250,12 +250,12 @@ namespace PastelECia.Views
 
         private void txtValor_Leave(object sender, EventArgs e)
         {
-            TxtDecimalLeave(sender, e);
+            TxtDecimalLeave(sender, e, txtValor);
         }
 
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            TxtDecimalKeyPress(sender, e);
+            TxtDecimalKeyPress(sender, e, txtValor);
         }
 
         private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)

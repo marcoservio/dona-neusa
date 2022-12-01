@@ -1,5 +1,6 @@
 ﻿using PastelECia.Models;
 
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace PastelECia.Dados.EfCore
         {
             using(var _context = new AppDbContext())
             {
-                return _context.Produto.Find(id);
+                var lstProdutos = _context.Produto.Include(p => p.UnidadeMedida).Where(p => p.Id == id).ToList();
+                
+                if(lstProdutos == null || lstProdutos.Count == 0)
+                    throw new Exception($"O produto com o código {id} não existe.");
+
+                return lstProdutos.First();
             }
         }
 
@@ -28,10 +34,9 @@ namespace PastelECia.Dados.EfCore
         {
             using(var _context = new AppDbContext())
             {
-                return _context.Produto.Where(p => p.Nome.Contains(nome)).ToList();
+                return _context.Produto.Include(p => p.UnidadeMedida).Where(p => p.Nome.Contains(nome)).ToList();
             }
         }
-
         public void Incluir(Produto produto)
         {
             using(var _context = new AppDbContext())

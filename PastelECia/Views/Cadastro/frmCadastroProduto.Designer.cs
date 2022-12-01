@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,7 +35,13 @@
             this.label36 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtgProduto = new System.Windows.Forms.DataGridView();
-            this.produtoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnidadeMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -61,15 +66,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnidadeMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -79,7 +76,6 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -152,10 +148,63 @@
             this.dtgProduto.ReadOnly = true;
             this.dtgProduto.Size = new System.Drawing.Size(900, 366);
             this.dtgProduto.TabIndex = 3;
+            this.dtgProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProduto_CellClick);
             // 
-            // produtoBindingSource1
+            // Id
             // 
-            this.produtoBindingSource1.DataSource = typeof(PastelECia.Models.Produto);
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Código";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 300;
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "Descricao";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            this.Descricao.Width = 450;
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "Valor";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Valor.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.DataPropertyName = "Quantidade";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.ReadOnly = true;
+            // 
+            // UnidadeMedida
+            // 
+            this.UnidadeMedida.DataPropertyName = "UnidadeMedida";
+            this.UnidadeMedida.HeaderText = "Unidade de Medida";
+            this.UnidadeMedida.Name = "UnidadeMedida";
+            this.UnidadeMedida.ReadOnly = true;
+            this.UnidadeMedida.Width = 200;
+            // 
+            // Inativo
+            // 
+            this.Inativo.DataPropertyName = "Inativo";
+            this.Inativo.HeaderText = "Inativo";
+            this.Inativo.Name = "Inativo";
+            this.Inativo.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -193,6 +242,8 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(84, 22);
             this.txtId.TabIndex = 1;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
+            this.txtId.Leave += new System.EventHandler(this.txtId_Leave);
             // 
             // label7
             // 
@@ -343,6 +394,7 @@
             // cmbUnidadeMedida
             // 
             this.cmbUnidadeMedida.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cmbUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUnidadeMedida.FormattingEnabled = true;
             this.cmbUnidadeMedida.Location = new System.Drawing.Point(0, 20);
@@ -409,6 +461,8 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(264, 22);
             this.txtValor.TabIndex = 1;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
+            this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
             // label1
             // 
@@ -419,62 +473,6 @@
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Valor";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Código";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 300;
-            // 
-            // Descricao
-            // 
-            this.Descricao.DataPropertyName = "Descricao";
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 450;
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "Valor";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Valor.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
-            // 
-            // Quantidade
-            // 
-            this.Quantidade.DataPropertyName = "Quantidade";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Quantidade.HeaderText = "Quantidade";
-            this.Quantidade.Name = "Quantidade";
-            this.Quantidade.ReadOnly = true;
-            // 
-            // UnidadeMedida
-            // 
-            this.UnidadeMedida.DataPropertyName = "UnidadeMedida";
-            this.UnidadeMedida.HeaderText = "Unidade de Medida";
-            this.UnidadeMedida.Name = "UnidadeMedida";
-            this.UnidadeMedida.ReadOnly = true;
-            this.UnidadeMedida.Width = 200;
-            // 
-            // Inativo
-            // 
-            this.Inativo.DataPropertyName = "Inativo";
-            this.Inativo.HeaderText = "Inativo";
-            this.Inativo.Name = "Inativo";
-            this.Inativo.ReadOnly = true;
             // 
             // frmCadastroProduto
             // 
@@ -492,7 +490,6 @@
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.dtgProduto, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -509,7 +506,6 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -537,8 +533,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource produtoBindingSource;
-        private System.Windows.Forms.BindingSource produtoBindingSource1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ComboBox cmbUnidadeMedida;
         private System.Windows.Forms.Label label3;

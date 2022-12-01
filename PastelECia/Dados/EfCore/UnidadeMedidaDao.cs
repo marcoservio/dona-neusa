@@ -1,15 +1,12 @@
 ﻿using PastelECia.Models;
 
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PastelECia.Dados.EfCore
 {
-    public  class UnidadeMedidaDao : ICommand<UnidadeMedida>, IQuery<UnidadeMedida>
+    public class UnidadeMedidaDao : ICommand<UnidadeMedida>, IQuery<UnidadeMedida>
     {
         public List<UnidadeMedida> ListarTodos()
         {

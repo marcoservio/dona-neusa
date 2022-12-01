@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace PastelECia.Views
 {
@@ -11,5 +13,8 @@ namespace PastelECia.Views
         void LimparTela();
         void LimparGrid();
         void UpdateRefreshGrid();
+        void TxtSomenteNumeroKeyPress(object sender, KeyPressEventArgs e);
+        void TxtDecimalKeyPress(object sender, KeyPressEventArgs e, TextBox txt);
+        void TxtDecimalLeave(object sender, EventArgs e, TextBox txt);
     }
 }

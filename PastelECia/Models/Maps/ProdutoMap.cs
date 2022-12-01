@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 
 namespace PastelECia.Models.Maps
 {
     public class ProdutoMap : EntityTypeConfiguration<Produto>
     {
-        public ProdutoMap() 
+        public ProdutoMap()
         {
             ToTable("Produto");
             HasKey(x => x.Id);

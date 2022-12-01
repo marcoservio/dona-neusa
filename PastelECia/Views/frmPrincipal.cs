@@ -94,5 +94,11 @@ namespace PastelECia.Views
             tb.Controls.Add(f);
             tbcAplicacoes.TabPages.Add(tb);
         }
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVenda f = new frmVenda();
+            f.ShowDialog();
+        }
     }
 }

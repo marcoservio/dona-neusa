@@ -61,26 +61,6 @@ namespace PastelECia.Properties {
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon about1 {
-            get {
-                object obj = ResourceManager.GetObject("about1", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon bankNotes {
-            get {
-                object obj = ResourceManager.GetObject("bankNotes", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cancelPadrao {
@@ -103,49 +83,9 @@ namespace PastelECia.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
         /// </summary>
-        internal static System.Drawing.Icon exibirRelatorio {
-            get {
-                object obj = ResourceManager.GetObject("exibirRelatorio", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon fabrica {
-            get {
-                object obj = ResourceManager.GetObject("fabrica", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon hotDog1 {
-            get {
-                object obj = ResourceManager.GetObject("hotDog1", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Icon logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon logo1 {
-            get {
-                object obj = ResourceManager.GetObject("logo1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -157,16 +97,6 @@ namespace PastelECia.Properties {
             get {
                 object obj = ResourceManager.GetObject("okPadrao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon pastel {
-            get {
-                object obj = ResourceManager.GetObject("pastel", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
     }

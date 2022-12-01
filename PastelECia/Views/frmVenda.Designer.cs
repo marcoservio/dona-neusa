@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVenda));
             this.dtgVenda = new System.Windows.Forms.DataGridView();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             this.lblProdutos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnLimapr = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCalculadora = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtValorTotalVenda = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLimapr = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVenda)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,32 +63,32 @@
             // 
             this.dtgVenda.AllowUserToAddRows = false;
             this.dtgVenda.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgVenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgVenda.Location = new System.Drawing.Point(0, 205);
             this.dtgVenda.Name = "dtgVenda";
             this.dtgVenda.ReadOnly = true;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgVenda.Size = new System.Drawing.Size(715, 431);
             this.dtgVenda.TabIndex = 9;
             // 
@@ -186,6 +186,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(715, 46);
             this.panel3.TabIndex = 1;
+            // 
+            // btnLimapr
+            // 
+            this.btnLimapr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimapr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimapr.Image = ((System.Drawing.Image)(resources.GetObject("btnLimapr.Image")));
+            this.btnLimapr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimapr.Location = new System.Drawing.Point(386, 4);
+            this.btnLimapr.Name = "btnLimapr";
+            this.btnLimapr.Size = new System.Drawing.Size(101, 38);
+            this.btnLimapr.TabIndex = 8;
+            this.btnLimapr.Text = "&Limpar";
+            this.btnLimapr.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimapr.UseVisualStyleBackColor = true;
+            this.btnLimapr.Click += new System.EventHandler(this.btnLimapr_Click);
             // 
             // btnSair
             // 
@@ -298,21 +313,6 @@
             this.label1.Size = new System.Drawing.Size(158, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Valor Total Venda:";
-            // 
-            // btnLimapr
-            // 
-            this.btnLimapr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimapr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimapr.Image = ((System.Drawing.Image)(resources.GetObject("btnLimapr.Image")));
-            this.btnLimapr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimapr.Location = new System.Drawing.Point(386, 4);
-            this.btnLimapr.Name = "btnLimapr";
-            this.btnLimapr.Size = new System.Drawing.Size(101, 38);
-            this.btnLimapr.TabIndex = 8;
-            this.btnLimapr.Text = "&Limpar";
-            this.btnLimapr.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimapr.UseVisualStyleBackColor = true;
-            this.btnLimapr.Click += new System.EventHandler(this.btnLimapr_Click);
             // 
             // frmVenda
             // 

@@ -12,27 +12,62 @@ namespace PastelECia.Services
 
         public void Alterar(Cliente obj)
         {
-            _dao.Alterar(obj);
+            try
+            {
+                _dao.Alterar(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public Cliente BuscarPor(int id)
         {
-            return _dao.BuscarPor(id);
+            try
+            {
+                return _dao.BuscarPor(id);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Excluir(Cliente obj)
         {
-            _dao.Excluir(obj);
+            try
+            {
+                _dao.Excluir(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Incluir(Cliente obj)
         {
-            _dao.Incluir(obj);
+            try
+            {
+                _dao.Incluir(obj);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public List<Cliente> ListarTodos()
         {
-            return _dao.ListarTodos();
+            try
+            {
+                return _dao.ListarTodos();
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

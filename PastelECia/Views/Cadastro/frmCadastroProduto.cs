@@ -1,15 +1,9 @@
-﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
-
-using PastelECia.Models;
+﻿using PastelECia.Models;
 using PastelECia.Models.Enum;
 using PastelECia.Services;
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace PastelECia.Views.Cadastro
@@ -26,9 +20,6 @@ namespace PastelECia.Views.Cadastro
 
         public void CarregarGrid(List<Produto> lst)
         {
-            if(lst == null || lst.Count == 0)
-                throw new Exception("Erro ao carregar a lista de produtos");
-
             dtgProduto.DataSource = lst;
             DesenharGrid();
             UpdateRefreshGrid();
@@ -38,12 +29,12 @@ namespace PastelECia.Views.Cadastro
         {
             var lst = _serviceUnidade.ListarTodos();
 
-            if(lst == null || lst.Count == 0)
-                throw new Exception("Erro ao carregar a lista de unidades de medidas");
-
-            cmbUnidadeMedida.DisplayMember = "Nome";
-            cmbUnidadeMedida.ValueMember = "Id";
-            cmbUnidadeMedida.DataSource = lst;
+            if(lst != null && lst.Count > 0)
+            {
+                cmbUnidadeMedida.DisplayMember = "NomeDescricao";
+                cmbUnidadeMedida.ValueMember = "Id";
+                cmbUnidadeMedida.DataSource = lst;
+            }
         }
 
         public void DesenharGrid()
@@ -73,14 +64,26 @@ namespace PastelECia.Views.Cadastro
 
         public void ObjetoParaTela(Produto obj)
         {
-            throw new NotImplementedException();
+            txtId.Text = obj?.Id.ToString();
+            txtNome.Text = obj?.Nome;
+            txtDescricao.Text = obj?.Descricao;
+            txtValor.Text = obj?.Valor.ToString();
+            txtQuantidade.Text = obj?.Quantidade.ToString();
+            cmbUnidadeMedida.SelectedValue = (int) obj?.UnidadeMedida?.Id;
+            if(obj?.Inativo == Enumerador.SimNao.S)
+                rdbSim.Checked = true;
+            else
+                rdbNao.Checked = true;
         }
 
         public Produto TelaParaObjeto()
         {
-           Produto produto = new Produto();
+            Produto produto = new Produto();
+
             if(string.IsNullOrEmpty(txtId.Text.Trim()))
                 txtId.Text = "0";
+            if(string.IsNullOrEmpty(txtQuantidade.Text.Trim()))
+                txtQuantidade.Text = "0";
             if(string.IsNullOrEmpty(txtNome.Text.Trim()))
                 throw new Exception("Campo Nome é obrigatorio");
             if(string.IsNullOrEmpty(txtValor.Text.Trim()))
@@ -91,7 +94,7 @@ namespace PastelECia.Views.Cadastro
             produto.Descricao = txtDescricao.Text.Trim();
             produto.Valor = Convert.ToDecimal(txtValor.Text.Trim());
             produto.Quantidade = Convert.ToInt32(txtQuantidade.Text.Trim());
-            produto.UnidadeMedidaId = (int)cmbUnidadeMedida.SelectedValue;
+            produto.UnidadeMedidaId = (int) cmbUnidadeMedida.SelectedValue;
             if(rdbSim.Checked)
                 produto.Inativo = Enumerador.SimNao.S;
             else
@@ -117,7 +120,7 @@ namespace PastelECia.Views.Cadastro
                     LimparGrid();
                     CarregarUnidadeMedida();
                     LimparTela();
-                    CarregarGrid(_serviceProduto.ListarTodosAtivos());
+                    CarregarGrid(_serviceProduto.ListarTodos());
                 }
             }
             catch(Exception ex)
@@ -137,7 +140,32 @@ namespace PastelECia.Views.Cadastro
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
 
+                if(string.IsNullOrEmpty(txtId.Text))
+                    throw new Exception("Selecione um produto para continuar com a exclusão.");
+
+                Produto produto = _serviceProduto.BuscarPor(Convert.ToInt32(txtId.Text));
+
+                if(produto == null)
+                    throw new Exception("Erro ao excluir o produto");
+
+                if(MessageBox.Show("Confirma a exclusão do Produto?", "Confirma", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    _serviceProduto.Excluir(produto);
+
+                CarregarGrid(_serviceProduto.ListarTodos());
+                LimparTela();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -167,6 +195,124 @@ namespace PastelECia.Views.Cadastro
             {
                 Cursor = Cursors.Default;
             }
+        }
+
+        public void TxtSomenteNumeroKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void TxtDecimalKeyPress(object sender, KeyPressEventArgs e, TextBox txt)
+        {
+            try
+            {
+                if(!Char.IsDigit(e.KeyChar) && e.KeyChar != (char) 8 && e.KeyChar != ',' && e.KeyChar != ',')
+                {
+                    e.Handled = true;
+                }
+                if(e.KeyChar == '.' || e.KeyChar == ',')
+                {
+                    if(!txt.Text.Contains(","))
+                    {
+                        e.KeyChar = ',';
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        public void TxtDecimalLeave(object sender, EventArgs e, TextBox txt)
+        {
+            try
+            {
+                if(txt.Text.Contains(",") == false)
+                {
+                    txt.Text += ",00";
+                }
+                else
+                {
+                    if(txt.Text.IndexOf(",") == txt.Text.Length - 1)
+                    {
+                        txt.Text += "00";
+                    }
+                }
+                try
+                {
+                    double d = Convert.ToDouble(txt.Text);
+                }
+                catch
+                {
+                    txt.Text = "0,00";
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TxtDecimalKeyPress(sender, e, txtValor);
+        }
+
+        private void txtValor_Leave(object sender, EventArgs e)
+        {
+            TxtDecimalLeave(sender, e, txtValor);
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TxtSomenteNumeroKeyPress(sender, e);
+        }
+
+        private void txtId_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                Produto produto = new Produto();
+
+                if(produto == null)
+                    throw new Exception("Produto não encontrado");
+
+                if(!string.IsNullOrEmpty(txtId.Text.Trim()))
+                {
+                    produto = _serviceProduto.BuscarPor(Convert.ToInt32(txtId.Text));
+                    ObjetoParaTela(produto);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void dtgProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dtgProduto.CurrentRow == null)
+                throw new Exception("Selecione um item da tabela.");
+
+            var produto = dtgProduto.CurrentRow.DataBoundItem as Produto;
+
+            if(produto == null)
+                throw new Exception("Erro ao buscar o produto");
+
+            ObjetoParaTela(produto);
         }
     }
 }

@@ -255,6 +255,10 @@
     <Compile Include="Migrations\202211281222489_Novo banco.designer.cs">
       <DependentUpon>202211281222489_Novo banco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212012040526_Criação de Campo tabela unidade medida.cs" />
+    <Compile Include="Migrations\202212012040526_Criação de Campo tabela unidade medida.designer.cs">
+      <DependentUpon>202212012040526_Criação de Campo tabela unidade medida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Enum\Enumerador.cs" />
     <Compile Include="Models\Maps\ClienteMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -270,6 +274,11 @@
     <Compile Include="Models\Maps\ProdutoMap.cs" />
     <Compile Include="Models\UnidadeMedida.cs" />
     <Compile Include="Models\VersaoSistema.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\ClienteService.cs" />
     <Compile Include="Services\EnderecoService.cs" />
     <Compile Include="Services\ParametroService.cs" />
@@ -325,6 +334,9 @@
     <EmbeddedResource Include="Migrations\202211281222489_Novo banco.resx">
       <DependentUpon>202211281222489_Novo banco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212012040526_Criação de Campo tabela unidade medida.resx">
+      <DependentUpon>202212012040526_Criação de Campo tabela unidade medida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Ancestral\frmAncestral.resx">
       <DependentUpon>frmAncestral.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,14 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Reports\frmRelNotaVenda.resx">
       <DependentUpon>frmRelNotaVenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,35 +397,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\cancelPadrao.png" />
-    <Content Include="Images\clean.png" />
     <Content Include="Images\deletePadrao.png" />
-    <Content Include="Images\Icons\about.ico" />
-    <Content Include="Images\Icons\hotDog.ico" />
     <Content Include="Images\Icons\logo.ico" />
-    <Content Include="Images\Icons\pastel.ico" />
-    <Content Include="Images\Icons\exibirRelatorio.ico" />
-    <Content Include="Images\Icons\fabrica.ico" />
-    <Content Include="Images\Icons\bankNotes.ico" />
-    <Content Include="Images\logo.png" />
+    <Content Include="Images\Logo\logo.png" />
+    <Content Include="Images\Logo\logoTamanhoReal.png" />
     <Content Include="Images\okPadrao.png" />
-    <Content Include="Images\Old Icons\about.png" />
-    <Content Include="Images\Old Icons\account.png" />
     <Content Include="Images\Old Icons\addNew.png" />
-    <Content Include="Images\Old Icons\adressBook.png" />
     <Content Include="Images\Old Icons\calculator.png" />
-    <Content Include="Images\Old Icons\cash.png" />
     <Content Include="Images\Old Icons\close.png" />
-    <Content Include="Images\Old Icons\fillForm.png" />
-    <Content Include="Images\Old Icons\hotDog.png" />
-    <Content Include="Images\Old Icons\money.png" />
     <Content Include="Images\Old Icons\ok.png" />
-    <Content Include="Images\Old Icons\pastel.png" />
     <Content Include="Images\Old Icons\remove.png" />
-    <Content Include="Images\Old Icons\search.png" />
-    <Content Include="Images\Old Icons\sell.png" />
     <Content Include="Images\Old Icons\sendPrinter.png" />
-    <Content Include="Images\Old Icons\streetFood.png" />
-    <Content Include="pastel.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

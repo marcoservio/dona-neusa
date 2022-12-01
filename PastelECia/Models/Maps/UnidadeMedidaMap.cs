@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 
 namespace PastelECia.Models.Maps
 {
@@ -15,6 +10,7 @@ namespace PastelECia.Models.Maps
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnName("Id_umd");
             Property(x => x.Nome).IsRequired().HasColumnName("Nome_umd").HasColumnType("varchar").HasMaxLength(70);
+            Property(x => x.Descricao).HasColumnName("Descricao_umd").HasColumnType("varchar").HasMaxLength(70);
             Property(x => x.DataAlteracao).IsRequired().HasColumnName("DataAlteracao_umd").HasColumnType("datetime");
             Property(x => x.Inativo).IsRequired().HasColumnName("Inativo_umd");
         }
