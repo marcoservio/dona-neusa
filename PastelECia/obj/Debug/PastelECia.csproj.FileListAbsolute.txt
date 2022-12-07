@@ -358,11 +358,11 @@ C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.csproj.AssemblyReferenc
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.csproj.SuggestedBindingRedirects.cache
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Migrations.Novobanco.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Migrations.CriaçãodeCampotabelaunidademedida.resources
+C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Migrations.Outropc.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.frmAncestral.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.Cadastro.frmCadastroProduto.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.frmPrincipal.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.frmSobre.resources
-C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.frmTesteCodigo.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.frmVenda.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Properties.Resources.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Relatorios.frmRelNotaVenda.resources

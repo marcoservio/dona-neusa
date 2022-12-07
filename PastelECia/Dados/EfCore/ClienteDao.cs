@@ -1,5 +1,6 @@
 ﻿using PastelECia.Models;
 
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,57 +11,62 @@ namespace PastelECia.Dados.EfCore
     {
         public List<Cliente> ListarTodos()
         {
-            using(var dbContext = new AppDbContext())
+            using(var _context = new AppDbContext())
             {
-                return dbContext.Cliente.Include(c => c.Endereco).ToList();
+                return _context.Cliente.Include(c => c.Endereco).ToList();
             }
         }
 
         public Cliente BuscarPor(int id)
         {
-            using(var dbContext = new AppDbContext())
+            using(var _context = new AppDbContext())
             {
-                return dbContext.Cliente.Find(id);
+                var lstClientes = _context.Cliente.Include(c => c.Endereco).Where(c => c.Id == id).ToList();
+
+                if (lstClientes == null || lstClientes.Count == 0)
+                    throw new Exception($"O cliente com o código {id} não existe.");
+
+                return lstClientes.First();
             }
         }
 
         public List<Cliente> ListarPor(string nome)
         {
-            using(var dbContext = new AppDbContext())
+            using(var _context = new AppDbContext())
             {
-                return dbContext.Cliente.Where(c => c.Nome.Contains(nome)).ToList();
+                return _context.Cliente.Include(c => c.Endereco).Where(c => c.Nome.Contains(nome)).ToList();
             }
         }
 
         public void Incluir(Cliente cliente)
         {
-            using(var dbContext = new AppDbContext())
+            using(var _context = new AppDbContext())
             {
-                dbContext.Cliente.Add(cliente);
-                dbContext.SaveChanges();
+                _context.Cliente.Add(cliente);
+                _context.SaveChanges();
             }
         }
 
         public void Alterar(Cliente cliente)
         {
-            using(var dbContext = new AppDbContext())
+            using(var _context = new AppDbContext())
             {
-                dbContext.Entry(cliente).State = EntityState.Modified;
-                dbContext.SaveChanges();
+                _context.Entry(cliente).State = EntityState.Modified;
+                _context.SaveChanges();
             }
         }
 
         public void Excluir(Cliente cliente)
         {
-            using(var dbContext = new AppDbContext())
+            using(var _context = new AppDbContext())
             {
-                var entry = dbContext.Entry(cliente);
+                var entry = _context.Entry(cliente);
 
                 if(entry.State == EntityState.Detached)
-                    dbContext.Cliente.Attach(cliente);
+                    _context.Cliente.Attach(cliente);
 
-                dbContext.Cliente.Remove(cliente);
-                dbContext.SaveChanges();
+                _context.Cliente.Remove(cliente);
+                _context.SaveChanges();
             }
         }
     }

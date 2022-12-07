@@ -75,7 +75,12 @@ namespace PastelECia.Services
         {
             try
             {
-                return _dao.ListarTodos().OrderByDescending(s => s.Id).First();
+                var lstVersao = _dao.ListarTodos();
+
+                if (lstVersao == null || lstVersao.Count == 0)
+                    return null;
+
+                return lstVersao.OrderByDescending(s => s.Id).First();
             }
             catch
             {

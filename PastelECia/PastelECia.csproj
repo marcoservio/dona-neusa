@@ -259,6 +259,10 @@
     <Compile Include="Migrations\202212012040526_Criação de Campo tabela unidade medida.designer.cs">
       <DependentUpon>202212012040526_Criação de Campo tabela unidade medida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212030410425_Outro pc.cs" />
+    <Compile Include="Migrations\202212030410425_Outro pc.designer.cs">
+      <DependentUpon>202212030410425_Outro pc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Enum\Enumerador.cs" />
     <Compile Include="Models\Maps\ClienteMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -279,6 +283,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Security\ControleVersaoSistema.cs" />
+    <Compile Include="Security\Criptografia.cs" />
+    <Compile Include="Security\VersaoAvaliacao.cs" />
     <Compile Include="Services\ClienteService.cs" />
     <Compile Include="Services\EnderecoService.cs" />
     <Compile Include="Services\ParametroService.cs" />
@@ -309,12 +316,6 @@
     <Compile Include="Views\frmSobre.Designer.cs">
       <DependentUpon>frmSobre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\TesteCodigo\frmTesteCodigo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\TesteCodigo\frmTesteCodigo.Designer.cs">
-      <DependentUpon>frmTesteCodigo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\frmVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +338,9 @@
     <EmbeddedResource Include="Migrations\202212012040526_Criação de Campo tabela unidade medida.resx">
       <DependentUpon>202212012040526_Criação de Campo tabela unidade medida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212030410425_Outro pc.resx">
+      <DependentUpon>202212030410425_Outro pc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Ancestral\frmAncestral.resx">
       <DependentUpon>frmAncestral.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,9 +352,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmSobre.resx">
       <DependentUpon>frmSobre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TesteCodigo\frmTesteCodigo.resx">
-      <DependentUpon>frmTesteCodigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmVenda.resx">
       <DependentUpon>frmVenda.cs</DependentUpon>
@@ -415,6 +416,9 @@
   <ItemGroup>
     <Folder Include="Views\Consulta\" />
     <Folder Include="Views\Login\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />

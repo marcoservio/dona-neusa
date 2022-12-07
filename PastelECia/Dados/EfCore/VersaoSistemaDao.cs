@@ -1,5 +1,6 @@
 ﻿using PastelECia.Models;
 
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace PastelECia.Dados.EfCore
         {
             using(var _context = new AppDbContext())
             {
-                return _context.VersaoSistema.Find(id);
+                var versao = _context.VersaoSistema.Find(id);
+
+                if (versao == null)
+                    throw new Exception($"A versão com o código {id} não existe.");
+
+                return versao;
             }
         }
 

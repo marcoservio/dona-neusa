@@ -55,7 +55,6 @@
             this.apagarAbaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.testeBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeAncestralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -222,7 +221,6 @@
             this.apagarAbaToolStripMenuItem1,
             this.sairToolStripMenuItem1,
             this.toolStripSeparator2,
-            this.testeBancoToolStripMenuItem,
             this.testeAncestralToolStripMenuItem});
             this.arquivoToolStripMenuItem1.Name = "arquivoToolStripMenuItem1";
             this.arquivoToolStripMenuItem1.Size = new System.Drawing.Size(65, 21);
@@ -231,44 +229,37 @@
             // conectarToolStripMenuItem1
             // 
             this.conectarToolStripMenuItem1.Name = "conectarToolStripMenuItem1";
-            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.conectarToolStripMenuItem1.Text = "&Conectar";
             // 
             // desconectarToolStripMenuItem1
             // 
             this.desconectarToolStripMenuItem1.Name = "desconectarToolStripMenuItem1";
-            this.desconectarToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.desconectarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.desconectarToolStripMenuItem1.Text = "&Desconectar";
             // 
             // apagarAbaToolStripMenuItem1
             // 
             this.apagarAbaToolStripMenuItem1.Name = "apagarAbaToolStripMenuItem1";
-            this.apagarAbaToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.apagarAbaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.apagarAbaToolStripMenuItem1.Text = "&Apagar Aba";
             // 
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem1.Text = "&Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(160, 6);
-            // 
-            // testeBancoToolStripMenuItem
-            // 
-            this.testeBancoToolStripMenuItem.Name = "testeBancoToolStripMenuItem";
-            this.testeBancoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.testeBancoToolStripMenuItem.Text = "Teste Banco";
-            this.testeBancoToolStripMenuItem.Click += new System.EventHandler(this.testeBancoToolStripMenuItem_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // testeAncestralToolStripMenuItem
             // 
             this.testeAncestralToolStripMenuItem.Name = "testeAncestralToolStripMenuItem";
-            this.testeAncestralToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.testeAncestralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.testeAncestralToolStripMenuItem.Text = "Teste Ancestral";
             this.testeAncestralToolStripMenuItem.Click += new System.EventHandler(this.testeAncestralToolStripMenuItem_Click);
             // 
@@ -289,7 +280,7 @@
             this.clienteToolStripMenuItem1,
             this.endereçoToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.cadastroToolStripMenuItem.Text = "&Cadastro";
             // 
             // produtoToolStripMenuItem
@@ -318,7 +309,7 @@
             this.clienteToolStripMenuItem2,
             this.endereçoToolStripMenuItem1});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.consultaToolStripMenuItem.Text = "&Consulta";
             // 
             // produtoToolStripMenuItem1
@@ -344,13 +335,13 @@
             this.movimentaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vendaToolStripMenuItem});
             this.movimentaçãoToolStripMenuItem.Name = "movimentaçãoToolStripMenuItem";
-            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.movimentaçãoToolStripMenuItem.Text = "&Movimentação";
             // 
             // vendaToolStripMenuItem
             // 
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.vendaToolStripMenuItem.Text = "&Venda";
             this.vendaToolStripMenuItem.Click += new System.EventHandler(this.vendaToolStripMenuItem_Click);
             // 
@@ -512,7 +503,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem testeBancoToolStripMenuItem;
         private System.Windows.Forms.TabControl tbcAplicacoes;
         private System.Windows.Forms.ToolStripMenuItem testeAncestralToolStripMenuItem;
     }

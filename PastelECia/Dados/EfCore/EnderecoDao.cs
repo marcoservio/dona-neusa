@@ -1,5 +1,6 @@
 ﻿using PastelECia.Models;
 
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace PastelECia.Dados.EfCore
         {
             using(var _context = new AppDbContext())
             {
-                return _context.Endereco.Find(id);
+                var endereco = _context.Endereco.Find(id);
+
+                if (endereco == null)
+                    throw new Exception($"O endereco com o código {id} não existe.");
+
+                return endereco;
             }
         }
 

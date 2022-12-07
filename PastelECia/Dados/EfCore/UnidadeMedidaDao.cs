@@ -1,5 +1,6 @@
 ﻿using PastelECia.Models;
 
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace PastelECia.Dados.EfCore
         {
             using(var _context = new AppDbContext())
             {
-                return _context.UnidadeMedida.Find(id);
+                var unidade = _context.UnidadeMedida.Find(id);
+
+                if (unidade == null)
+                    throw new Exception($"A unidade de medida com o código {id} não existe.");
+
+                return unidade;
             }
         }
 

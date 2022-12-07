@@ -1,5 +1,6 @@
 ﻿using PastelECia.Models;
 
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace PastelECia.Dados.EfCore
         {
             using(var _context = new AppDbContext())
             {
-                return _context.Parametro.Find(id);
+                var parametro = _context.Parametro.Find(id);
+
+                if (parametro == null)
+                    throw new Exception($"O parametro com o código {id} não existe.");
+
+                return parametro;
             }
         }
 

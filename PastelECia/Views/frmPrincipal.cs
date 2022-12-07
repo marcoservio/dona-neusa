@@ -56,19 +56,6 @@ namespace PastelECia.Views
             sobre.Dispose();
         }
 
-        private void testeBancoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmTesteCodigo f = new frmTesteCodigo();
-            f.Dock = DockStyle.Fill;
-
-            TabPage tb = new TabPage();
-            tb.Name = "Teste de Codigo";
-            tb.Text = "Teste de Codigo";
-            tb.ImageIndex = 0;
-            tb.Controls.Add(f);
-            tbcAplicacoes.TabPages.Add(tb);
-        }
-
         private void testeAncestralToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAncestral f = new frmAncestral();

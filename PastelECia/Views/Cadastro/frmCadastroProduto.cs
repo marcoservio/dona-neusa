@@ -31,7 +31,6 @@ namespace PastelECia.Views.Cadastro
 
             if(lst != null && lst.Count > 0)
             {
-                //teste
                 cmbUnidadeMedida.DisplayMember = "NomeDescricao";
                 cmbUnidadeMedida.ValueMember = "Id";
                 cmbUnidadeMedida.DataSource = lst;
