@@ -34,7 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblVersao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblVersao);
             this.panel1.Location = new System.Drawing.Point(12, 17);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 152);
@@ -87,14 +87,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Autor : Marco Sérvio Almeida Capanema";
             // 
-            // label1
+            // lblVersao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Versão Carregada pelo sistema";
+            this.lblVersao.AutoSize = true;
+            this.lblVersao.Location = new System.Drawing.Point(15, 38);
+            this.lblVersao.Name = "lblVersao";
+            this.lblVersao.Size = new System.Drawing.Size(153, 13);
+            this.lblVersao.TabIndex = 0;
+            this.lblVersao.Text = "Versão Carregada pelo sistema";
             // 
             // frmSobre
             // 
@@ -122,6 +122,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblVersao;
     }
 }
