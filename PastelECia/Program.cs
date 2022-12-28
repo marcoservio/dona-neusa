@@ -1,11 +1,7 @@
-﻿using PastelECia.Models;
-using PastelECia.Security;
-using PastelECia.Services;
+﻿using PastelECia.Security;
 using PastelECia.Views;
 
 using System;
-using System.IO;
-using System.Text;
 using System.Windows.Forms;
 
 namespace PastelECia
@@ -19,7 +15,7 @@ namespace PastelECia
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                new ControleVersaoSistema(1, 1, 16);
+                new ControleVersaoSistema(1, 1, 20);
                 new VersaoAvaliacao().Ativar(false);
 
                 Application.EnableVisualStyles();

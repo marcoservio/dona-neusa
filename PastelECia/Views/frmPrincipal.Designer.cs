@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,6 @@
             this.apagarAbaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.testeAncestralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +79,7 @@
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcAplicacoes = new System.Windows.Forms.TabControl();
+            this.imlImagens = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,8 +221,7 @@
             this.desconectarToolStripMenuItem1,
             this.apagarAbaToolStripMenuItem1,
             this.sairToolStripMenuItem1,
-            this.toolStripSeparator2,
-            this.testeAncestralToolStripMenuItem});
+            this.toolStripSeparator2});
             this.arquivoToolStripMenuItem1.Name = "arquivoToolStripMenuItem1";
             this.arquivoToolStripMenuItem1.Size = new System.Drawing.Size(65, 21);
             this.arquivoToolStripMenuItem1.Text = "&Arquivo";
@@ -256,13 +256,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
-            // testeAncestralToolStripMenuItem
-            // 
-            this.testeAncestralToolStripMenuItem.Name = "testeAncestralToolStripMenuItem";
-            this.testeAncestralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.testeAncestralToolStripMenuItem.Text = "Teste Ancestral";
-            this.testeAncestralToolStripMenuItem.Click += new System.EventHandler(this.testeAncestralToolStripMenuItem_Click);
-            // 
             // testeToolStripMenuItem
             // 
             this.testeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -279,12 +272,14 @@
             this.produtoToolStripMenuItem,
             this.clienteToolStripMenuItem1,
             this.endereçoToolStripMenuItem});
+            this.cadastroToolStripMenuItem.Image = global::PastelECia.Properties.Resources.add;
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroToolStripMenuItem.Text = "&Cadastro";
             // 
             // produtoToolStripMenuItem
             // 
+            this.produtoToolStripMenuItem.Image = global::PastelECia.Properties.Resources.comida;
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             this.produtoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.produtoToolStripMenuItem.Text = "&Produto";
@@ -292,12 +287,14 @@
             // 
             // clienteToolStripMenuItem1
             // 
+            this.clienteToolStripMenuItem1.Image = global::PastelECia.Properties.Resources.user;
             this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
             this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.clienteToolStripMenuItem1.Text = "&Cliente";
             // 
             // endereçoToolStripMenuItem
             // 
+            this.endereçoToolStripMenuItem.Image = global::PastelECia.Properties.Resources.endereco;
             this.endereçoToolStripMenuItem.Name = "endereçoToolStripMenuItem";
             this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.endereçoToolStripMenuItem.Text = "&Endereço";
@@ -308,24 +305,28 @@
             this.produtoToolStripMenuItem1,
             this.clienteToolStripMenuItem2,
             this.endereçoToolStripMenuItem1});
+            this.consultaToolStripMenuItem.Image = global::PastelECia.Properties.Resources.busca;
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaToolStripMenuItem.Text = "&Consulta";
             // 
             // produtoToolStripMenuItem1
             // 
+            this.produtoToolStripMenuItem1.Image = global::PastelECia.Properties.Resources.comida;
             this.produtoToolStripMenuItem1.Name = "produtoToolStripMenuItem1";
             this.produtoToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.produtoToolStripMenuItem1.Text = "&Produto";
             // 
             // clienteToolStripMenuItem2
             // 
+            this.clienteToolStripMenuItem2.Image = global::PastelECia.Properties.Resources.user;
             this.clienteToolStripMenuItem2.Name = "clienteToolStripMenuItem2";
             this.clienteToolStripMenuItem2.Size = new System.Drawing.Size(131, 22);
             this.clienteToolStripMenuItem2.Text = "&Cliente";
             // 
             // endereçoToolStripMenuItem1
             // 
+            this.endereçoToolStripMenuItem1.Image = global::PastelECia.Properties.Resources.endereco;
             this.endereçoToolStripMenuItem1.Name = "endereçoToolStripMenuItem1";
             this.endereçoToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.endereçoToolStripMenuItem1.Text = "&Endereço";
@@ -334,12 +335,14 @@
             // 
             this.movimentaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vendaToolStripMenuItem});
+            this.movimentaçãoToolStripMenuItem.Image = global::PastelECia.Properties.Resources.porquinho;
             this.movimentaçãoToolStripMenuItem.Name = "movimentaçãoToolStripMenuItem";
-            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.movimentaçãoToolStripMenuItem.Text = "&Movimentação";
             // 
             // vendaToolStripMenuItem
             // 
+            this.vendaToolStripMenuItem.Image = global::PastelECia.Properties.Resources.venda;
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.vendaToolStripMenuItem.Text = "&Venda";
@@ -359,6 +362,7 @@
             // 
             // calculadoraToolStripMenuItem
             // 
+            this.calculadoraToolStripMenuItem.Image = global::PastelECia.Properties.Resources.calculadora;
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.calculadoraToolStripMenuItem.Text = "&Calculadora";
@@ -366,6 +370,7 @@
             // 
             // explorerToolStripMenuItem
             // 
+            this.explorerToolStripMenuItem.Image = global::PastelECia.Properties.Resources.file;
             this.explorerToolStripMenuItem.Name = "explorerToolStripMenuItem";
             this.explorerToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.explorerToolStripMenuItem.Text = "&Explorer";
@@ -373,6 +378,7 @@
             // 
             // blocoDeNotasToolStripMenuItem
             // 
+            this.blocoDeNotasToolStripMenuItem.Image = global::PastelECia.Properties.Resources.notepad;
             this.blocoDeNotasToolStripMenuItem.Name = "blocoDeNotasToolStripMenuItem";
             this.blocoDeNotasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.blocoDeNotasToolStripMenuItem.Text = "&Bloco de Notas";
@@ -380,6 +386,7 @@
             // 
             // excelToolStripMenuItem
             // 
+            this.excelToolStripMenuItem.Image = global::PastelECia.Properties.Resources.excel;
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
             this.excelToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.excelToolStripMenuItem.Text = "&Excel";
@@ -387,6 +394,7 @@
             // 
             // wordToolStripMenuItem
             // 
+            this.wordToolStripMenuItem.Image = global::PastelECia.Properties.Resources.word;
             this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
             this.wordToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.wordToolStripMenuItem.Text = "&Word";
@@ -402,8 +410,9 @@
             // 
             // sobreToolStripMenuItem
             // 
+            this.sobreToolStripMenuItem.Image = global::PastelECia.Properties.Resources.about;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sobreToolStripMenuItem.Text = "&Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -428,11 +437,22 @@
             // tbcAplicacoes
             // 
             this.tbcAplicacoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbcAplicacoes.ImageList = this.imlImagens;
             this.tbcAplicacoes.Location = new System.Drawing.Point(0, 25);
             this.tbcAplicacoes.Name = "tbcAplicacoes";
             this.tbcAplicacoes.SelectedIndex = 0;
             this.tbcAplicacoes.Size = new System.Drawing.Size(884, 536);
             this.tbcAplicacoes.TabIndex = 2;
+            this.tbcAplicacoes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tbcAplicacoes_MouseDown);
+            // 
+            // imlImagens
+            // 
+            this.imlImagens.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlImagens.ImageStream")));
+            this.imlImagens.TransparentColor = System.Drawing.Color.Transparent;
+            this.imlImagens.Images.SetKeyName(0, "comida.png");
+            this.imlImagens.Images.SetKeyName(1, "venda.png");
+            this.imlImagens.Images.SetKeyName(2, "endereco.png");
+            this.imlImagens.Images.SetKeyName(3, "user.png");
             // 
             // frmPrincipal
             // 
@@ -504,6 +524,6 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.TabControl tbcAplicacoes;
-        private System.Windows.Forms.ToolStripMenuItem testeAncestralToolStripMenuItem;
+        private System.Windows.Forms.ImageList imlImagens;
     }
 }

@@ -366,6 +366,7 @@ C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.frmSobre.resource
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.frmVenda.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Properties.Resources.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Relatorios.frmRelNotaVenda.resources
+C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.Views.Movimentacao.frmVendaNew.resources
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.csproj.GenerateResource.cache
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.csproj.CoreCompileInputs.cache
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\PastelECia.csproj.CopyComplete

@@ -45,15 +45,15 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblVersao);
-            this.panel1.Location = new System.Drawing.Point(12, 17);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 152);
+            this.panel1.Size = new System.Drawing.Size(237, 157);
             this.panel1.TabIndex = 5;
             // 
             // lblData
             // 
             this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(15, 67);
+            this.lblData.Location = new System.Drawing.Point(15, 77);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(142, 13);
             this.lblData.TabIndex = 5;
@@ -62,7 +62,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 95);
+            this.label4.Location = new System.Drawing.Point(15, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 13);
             this.label4.TabIndex = 4;
@@ -74,14 +74,14 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(68, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 15);
+            this.label2.Size = new System.Drawing.Size(86, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Pastel E CIA";
+            this.label2.Text = "Dona Neusa";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 122);
+            this.label3.Location = new System.Drawing.Point(15, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 13);
             this.label3.TabIndex = 2;
@@ -90,7 +90,7 @@
             // lblVersao
             // 
             this.lblVersao.AutoSize = true;
-            this.lblVersao.Location = new System.Drawing.Point(15, 38);
+            this.lblVersao.Location = new System.Drawing.Point(15, 48);
             this.lblVersao.Name = "lblVersao";
             this.lblVersao.Size = new System.Drawing.Size(153, 13);
             this.lblVersao.TabIndex = 0;

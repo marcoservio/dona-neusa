@@ -113,11 +113,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         protected System.Windows.Forms.Button btnCancelar;
         protected System.Windows.Forms.Button btnSalvar;
         protected System.Windows.Forms.Button btnExcluir;
+        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.Panel panel2;
     }
 }

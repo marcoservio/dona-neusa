@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\Icons\logo.ico</ApplicationIcon>
+    <ApplicationIcon>logo64.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Caelum.Stella.CSharp, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
@@ -283,6 +283,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Security\Arquivo.cs" />
+    <Compile Include="Security\ChaveCriptografia.cs" />
     <Compile Include="Security\ControleVersaoSistema.cs" />
     <Compile Include="Security\Criptografia.cs" />
     <Compile Include="Security\VersaoAvaliacao.cs" />
@@ -331,6 +333,12 @@
       <DependentUpon>frmRelNotaVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Produto.cs" />
+    <Compile Include="Views\Movimentacao\frmVendaNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Movimentacao\frmVendaNew.Designer.cs">
+      <DependentUpon>frmVendaNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Utilitarios\IMethodsModel.cs" />
     <EmbeddedResource Include="Migrations\202211281222489_Novo banco.resx">
       <DependentUpon>202211281222489_Novo banco.cs</DependentUpon>
@@ -365,6 +373,9 @@
       <DependentUpon>frmRelNotaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RelNotaVenda.rdlc" />
+    <EmbeddedResource Include="Views\Movimentacao\frmVendaNew.resx">
+      <DependentUpon>frmVendaNew.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PastelECia.Cliente.frmVenda.datasource" />
     <None Include="Properties\DataSources\PastelECia.Models.Cliente.datasource" />
@@ -397,11 +408,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\about.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\busca.png" />
+    <Content Include="Images\calculadora.png" />
     <Content Include="Images\cancelPadrao.png" />
+    <Content Include="Images\comida.png" />
     <Content Include="Images\deletePadrao.png" />
+    <Content Include="Images\endereco.png" />
+    <Content Include="Images\excel.png" />
+    <Content Include="Images\file.png" />
     <Content Include="Images\Icons\logo.ico" />
+    <Content Include="Images\impressora.png" />
     <Content Include="Images\Logo\logo.png" />
     <Content Include="Images\Logo\logoTamanhoReal.png" />
+    <Content Include="Images\moneyBag.png" />
+    <Content Include="Images\notepad.png" />
     <Content Include="Images\okPadrao.png" />
     <Content Include="Images\Old Icons\addNew.png" />
     <Content Include="Images\Old Icons\calculator.png" />
@@ -409,6 +431,12 @@
     <Content Include="Images\Old Icons\ok.png" />
     <Content Include="Images\Old Icons\remove.png" />
     <Content Include="Images\Old Icons\sendPrinter.png" />
+    <Content Include="Images\porquinho.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\vassoura.png" />
+    <Content Include="Images\venda.png" />
+    <Content Include="Images\word.png" />
+    <Content Include="logo64.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -31,7 +31,7 @@ namespace PastelECia.Security
             return string.Empty;
         }
 
-        public string Criptografar(string informacao, string chave)
+        public static string Criptografar(string informacao, string chave)
         {
             if (string.IsNullOrEmpty(informacao) || string.IsNullOrEmpty(chave))
                 return string.Empty;
@@ -43,7 +43,7 @@ namespace PastelECia.Security
             return Encode(encodeInfoChave);
         }
 
-        public string Descriptografar(string informacao, string chave)
+        public static string Descriptografar(string informacao, string chave)
         {
             try
             {

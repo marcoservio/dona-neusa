@@ -7,8 +7,6 @@ namespace PastelECia.Security
 {
     public class VersaoAvaliacao
     {
-        private const string CHAVE = "@@D0NA_NEUS4";
-
         public void Ativar(bool ehAvaliacao)
         {
             if (ehAvaliacao)
@@ -29,14 +27,9 @@ namespace PastelECia.Security
         {
             Parametro par = new Parametro();
             string diaLimiteAcesso = string.Empty;
+            var diaLimiteAcessoCriptografado = Arquivo.Read(caminho);
 
-            using (var fs = new FileStream(caminho, FileMode.Open))
-            using (var leitor = new BinaryReader(fs))
-            {
-                diaLimiteAcesso = leitor.ReadString();
-            }
-
-            diaLimiteAcesso = new Criptografia().Descriptografar(diaLimiteAcesso, CHAVE);
+            diaLimiteAcesso = Criptografia.Descriptografar(diaLimiteAcessoCriptografado, ChaveCriptografia.CHAVE);
             par.DataLimiteAcesso = Convert.ToDateTime(diaLimiteAcesso.Split(':')[1]);
 
             return par;
@@ -46,13 +39,8 @@ namespace PastelECia.Security
         {
             DateTime dataLimite = DateTime.Now.AddDays(5);
             string mensagem = $"diaLimiteAcesso: {dataLimite.ToString("d")}";
-            string mensagemCriptografada = new Criptografia().Criptografar(mensagem, CHAVE);
-
-            using (var fs = new FileStream(caminho, FileMode.Create))
-            using (var escritor = new BinaryWriter(fs))
-            {
-                escritor.Write(mensagemCriptografada);
-            }
+            string mensagemCriptografada = Criptografia.Criptografar(mensagem, ChaveCriptografia.CHAVE);
+            Arquivo.Write(caminho, mensagemCriptografada);
         }
     }
 }

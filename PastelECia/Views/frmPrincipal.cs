@@ -1,4 +1,5 @@
 ﻿using PastelECia.Views.Cadastro;
+using PastelECia.Views.Movimentacao;
 
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,14 @@ namespace PastelECia.Views
         public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+        public void ApagaAba(TabPage tabPage)
+        {
+            if (!(tabPage == null))
+            {
+                tbcAplicacoes.TabPages.Remove(tabPage);
+            }
         }
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -67,6 +76,7 @@ namespace PastelECia.Views
             tb.ImageIndex = 0;
             tb.Controls.Add(f);
             tbcAplicacoes.TabPages.Add(tb);
+            tbcAplicacoes.SelectedTab = tb;
         }
 
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,12 +90,29 @@ namespace PastelECia.Views
             tb.ImageIndex = 0;
             tb.Controls.Add(f);
             tbcAplicacoes.TabPages.Add(tb);
+            tbcAplicacoes.SelectedTab = tb;
         }
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVenda f = new frmVenda();
-            f.ShowDialog();
+            frmVendaNew f = new frmVendaNew();
+            f.Dock = DockStyle.Fill;
+
+            TabPage tb = new TabPage();
+            tb.Name = "Venda";
+            tb.Text = "Venda";
+            tb.ImageIndex = 1;
+            tb.Controls.Add(f);
+            tbcAplicacoes.TabPages.Add(tb);
+            tbcAplicacoes.SelectedTab = tb;
+        }
+
+        private void tbcAplicacoes_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Middle)
+            {
+                ApagaAba(tbcAplicacoes.SelectedTab);
+            }
         }
     }
 }

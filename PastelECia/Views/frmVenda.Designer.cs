@@ -89,7 +89,7 @@
             this.dtgVenda.ReadOnly = true;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgVenda.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgVenda.Size = new System.Drawing.Size(715, 431);
+            this.dtgVenda.Size = new System.Drawing.Size(715, 390);
             this.dtgVenda.TabIndex = 9;
             // 
             // txtQuantidade
@@ -319,8 +319,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 636);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtgVenda);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

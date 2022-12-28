@@ -162,8 +162,7 @@ namespace PastelECia.Views
                 dt.Rows.Add(item.Cells["Nome"].Value.ToString(), item.Cells["Quantidade"].Value.ToString(), Convert.ToDecimal(item.Cells["Valor"].Value.ToString()), Convert.ToDecimal(item.Cells["ValorTotal"].Value.ToString()));
             }
 
-            dt.Rows.Add("", "", "", "");
-            dt.Rows.Add("", "", "Valor Total Venda: ", ValorTotalVenda());
+            dt.Rows.Add("", "", "Total Venda: ", ValorTotalVenda());
 
             return dt;
         }
