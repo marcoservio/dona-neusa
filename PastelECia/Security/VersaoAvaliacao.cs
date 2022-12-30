@@ -7,7 +7,7 @@ namespace PastelECia.Security
 {
     public class VersaoAvaliacao
     {
-        public void Ativar(bool ehAvaliacao)
+        public VersaoAvaliacao(bool ehAvaliacao)
         {
             if (ehAvaliacao)
             {

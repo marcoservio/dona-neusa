@@ -1,6 +1,5 @@
 ﻿using PastelECia.Models;
 
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,7 +10,7 @@ namespace PastelECia.Dados.EfCore
     {
         public List<Parametro> ListarTodos()
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 return _context.Parametro.ToList();
             }
@@ -19,12 +18,12 @@ namespace PastelECia.Dados.EfCore
 
         public Parametro BuscarPor(int id)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var parametro = _context.Parametro.Find(id);
 
                 if (parametro == null)
-                    throw new Exception($"O parametro com o código {id} não existe.");
+                    return null;
 
                 return parametro;
             }
@@ -32,7 +31,7 @@ namespace PastelECia.Dados.EfCore
 
         public void Incluir(Parametro parametro)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.Parametro.Add(parametro);
                 _context.SaveChanges();
@@ -41,7 +40,7 @@ namespace PastelECia.Dados.EfCore
 
         public void Alterar(Parametro parametro)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.Entry(parametro).State = EntityState.Modified;
                 _context.SaveChanges();
@@ -50,11 +49,11 @@ namespace PastelECia.Dados.EfCore
 
         public void Excluir(Parametro parametro)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var entry = _context.Entry(parametro);
 
-                if(entry.State == EntityState.Detached)
+                if (entry.State == EntityState.Detached)
                     _context.Parametro.Attach(parametro);
 
                 _context.Parametro.Remove(parametro);

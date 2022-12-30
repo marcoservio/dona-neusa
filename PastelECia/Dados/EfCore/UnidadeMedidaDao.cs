@@ -1,6 +1,5 @@
 ﻿using PastelECia.Models;
 
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,7 +10,7 @@ namespace PastelECia.Dados.EfCore
     {
         public List<UnidadeMedida> ListarTodos()
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 return _context.UnidadeMedida.ToList();
             }
@@ -19,12 +18,12 @@ namespace PastelECia.Dados.EfCore
 
         public UnidadeMedida BuscarPor(int id)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var unidade = _context.UnidadeMedida.Find(id);
 
                 if (unidade == null)
-                    throw new Exception($"A unidade de medida com o código {id} não existe.");
+                    return null;
 
                 return unidade;
             }
@@ -32,7 +31,7 @@ namespace PastelECia.Dados.EfCore
 
         public List<UnidadeMedida> ListarPor(string nome)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 return _context.UnidadeMedida.Where(p => p.Nome.Contains(nome)).ToList();
             }
@@ -40,7 +39,7 @@ namespace PastelECia.Dados.EfCore
 
         public void Incluir(UnidadeMedida obj)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.UnidadeMedida.Add(obj);
                 _context.SaveChanges();
@@ -49,7 +48,7 @@ namespace PastelECia.Dados.EfCore
 
         public void Alterar(UnidadeMedida obj)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.Entry(obj).State = EntityState.Modified;
                 _context.SaveChanges();
@@ -58,11 +57,11 @@ namespace PastelECia.Dados.EfCore
 
         public void Excluir(UnidadeMedida obj)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var entry = _context.Entry(obj);
 
-                if(entry.State == EntityState.Detached)
+                if (entry.State == EntityState.Detached)
                     _context.UnidadeMedida.Attach(obj);
 
                 _context.UnidadeMedida.Remove(obj);

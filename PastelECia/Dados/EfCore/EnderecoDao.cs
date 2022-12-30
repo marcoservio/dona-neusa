@@ -1,6 +1,5 @@
 ﻿using PastelECia.Models;
 
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,7 +10,7 @@ namespace PastelECia.Dados.EfCore
     {
         public List<Endereco> ListarTodos()
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 return _context.Endereco.ToList();
             }
@@ -19,12 +18,12 @@ namespace PastelECia.Dados.EfCore
 
         public Endereco BuscarPor(int id)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var endereco = _context.Endereco.Find(id);
 
                 if (endereco == null)
-                    throw new Exception($"O endereco com o código {id} não existe.");
+                    return null;
 
                 return endereco;
             }
@@ -32,7 +31,7 @@ namespace PastelECia.Dados.EfCore
 
         public void Incluir(Endereco endereco)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.Endereco.Add(endereco);
                 _context.SaveChanges();
@@ -41,7 +40,7 @@ namespace PastelECia.Dados.EfCore
 
         public void Alterar(Endereco endereco)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.Entry(endereco).State = EntityState.Modified;
                 _context.SaveChanges();
@@ -50,11 +49,11 @@ namespace PastelECia.Dados.EfCore
 
         public void Excluir(Endereco endereco)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var entry = _context.Entry(endereco);
 
-                if(entry.State == EntityState.Detached)
+                if (entry.State == EntityState.Detached)
                     _context.Endereco.Attach(endereco);
 
                 _context.Endereco.Remove(endereco);

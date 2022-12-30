@@ -1,10 +1,13 @@
-﻿using PastelECia.Views.Cadastro;
+﻿using PastelECia.Dados.EfCore;
+using PastelECia.Dados.EfCore.Utilitarios;
+using PastelECia.Views.Cadastro;
 using PastelECia.Views.Movimentacao;
 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -112,6 +115,30 @@ namespace PastelECia.Views
             if (e.Button == MouseButtons.Middle)
             {
                 ApagaAba(tbcAplicacoes.SelectedTab);
+            }
+        }
+
+        private void conectarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void testeConexãoBancoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                ConnectionTest.Test();
+                MessageBox.Show("Conectado com sucesso", "Conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
     }

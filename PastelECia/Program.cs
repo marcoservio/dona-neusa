@@ -1,7 +1,9 @@
-﻿using PastelECia.Security;
+﻿using PastelECia.Dados.EfCore.Utilitarios;
+using PastelECia.Security;
 using PastelECia.Views;
 
 using System;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace PastelECia
@@ -13,10 +15,8 @@ namespace PastelECia
         {
             try
             {
-                Cursor.Current = Cursors.WaitCursor;
-
-                new ControleVersaoSistema(1, 1, 20);
-                new VersaoAvaliacao().Ativar(false);
+                new ComBancoDados(true);
+                new VersaoAvaliacao(false);
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
@@ -25,10 +25,6 @@ namespace PastelECia
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                Cursor.Current = Cursors.Default;
             }
         }
     }

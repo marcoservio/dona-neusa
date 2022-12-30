@@ -80,6 +80,7 @@
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcAplicacoes = new System.Windows.Forms.TabControl();
             this.imlImagens = new System.Windows.Forms.ImageList(this.components);
+            this.testeConexãoBancoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -221,7 +222,8 @@
             this.desconectarToolStripMenuItem1,
             this.apagarAbaToolStripMenuItem1,
             this.sairToolStripMenuItem1,
-            this.toolStripSeparator2});
+            this.toolStripSeparator2,
+            this.testeConexãoBancoToolStripMenuItem});
             this.arquivoToolStripMenuItem1.Name = "arquivoToolStripMenuItem1";
             this.arquivoToolStripMenuItem1.Size = new System.Drawing.Size(65, 21);
             this.arquivoToolStripMenuItem1.Text = "&Arquivo";
@@ -231,6 +233,7 @@
             this.conectarToolStripMenuItem1.Name = "conectarToolStripMenuItem1";
             this.conectarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.conectarToolStripMenuItem1.Text = "&Conectar";
+            this.conectarToolStripMenuItem1.Click += new System.EventHandler(this.conectarToolStripMenuItem1_Click);
             // 
             // desconectarToolStripMenuItem1
             // 
@@ -274,7 +277,7 @@
             this.endereçoToolStripMenuItem});
             this.cadastroToolStripMenuItem.Image = global::PastelECia.Properties.Resources.add;
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.cadastroToolStripMenuItem.Text = "&Cadastro";
             // 
             // produtoToolStripMenuItem
@@ -307,7 +310,7 @@
             this.endereçoToolStripMenuItem1});
             this.consultaToolStripMenuItem.Image = global::PastelECia.Properties.Resources.busca;
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.consultaToolStripMenuItem.Text = "&Consulta";
             // 
             // produtoToolStripMenuItem1
@@ -337,7 +340,7 @@
             this.vendaToolStripMenuItem});
             this.movimentaçãoToolStripMenuItem.Image = global::PastelECia.Properties.Resources.porquinho;
             this.movimentaçãoToolStripMenuItem.Name = "movimentaçãoToolStripMenuItem";
-            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.movimentaçãoToolStripMenuItem.Text = "&Movimentação";
             // 
             // vendaToolStripMenuItem
@@ -412,7 +415,7 @@
             // 
             this.sobreToolStripMenuItem.Image = global::PastelECia.Properties.Resources.about;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.sobreToolStripMenuItem.Text = "&Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -453,6 +456,13 @@
             this.imlImagens.Images.SetKeyName(1, "venda.png");
             this.imlImagens.Images.SetKeyName(2, "endereco.png");
             this.imlImagens.Images.SetKeyName(3, "user.png");
+            // 
+            // testeConexãoBancoToolStripMenuItem
+            // 
+            this.testeConexãoBancoToolStripMenuItem.Name = "testeConexãoBancoToolStripMenuItem";
+            this.testeConexãoBancoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.testeConexãoBancoToolStripMenuItem.Text = "Teste Conexão Banco";
+            this.testeConexãoBancoToolStripMenuItem.Click += new System.EventHandler(this.testeConexãoBancoToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -525,5 +535,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.TabControl tbcAplicacoes;
         private System.Windows.Forms.ImageList imlImagens;
+        private System.Windows.Forms.ToolStripMenuItem testeConexãoBancoToolStripMenuItem;
     }
 }

@@ -1,6 +1,5 @@
 ﻿using PastelECia.Models;
 
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,7 +10,7 @@ namespace PastelECia.Dados.EfCore
     {
         public List<Produto> ListarTodos()
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 return _context.Produto.Include(p => p.UnidadeMedida).ToList();
             }
@@ -19,12 +18,12 @@ namespace PastelECia.Dados.EfCore
 
         public Produto BuscarPor(int id)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var lstProdutos = _context.Produto.Include(p => p.UnidadeMedida).Where(p => p.Id == id).ToList();
-                
-                if(lstProdutos == null || lstProdutos.Count == 0)
-                    throw new Exception($"O produto com o código {id} não existe.");
+
+                if (lstProdutos == null || lstProdutos.Count == 0)
+                    return null;
 
                 return lstProdutos.First();
             }
@@ -32,14 +31,15 @@ namespace PastelECia.Dados.EfCore
 
         public List<Produto> ListarPor(string nome)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 return _context.Produto.Include(p => p.UnidadeMedida).Where(p => p.Nome.Contains(nome)).ToList();
             }
         }
+
         public void Incluir(Produto produto)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.Produto.Add(produto);
                 _context.SaveChanges();
@@ -48,7 +48,7 @@ namespace PastelECia.Dados.EfCore
 
         public void Alterar(Produto produto)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 _context.Entry(produto).State = EntityState.Modified;
                 _context.SaveChanges();
@@ -57,11 +57,11 @@ namespace PastelECia.Dados.EfCore
 
         public void Excluir(Produto produto)
         {
-            using(var _context = new AppDbContext())
+            using (var _context = new AppDbContext())
             {
                 var entry = _context.Entry(produto);
 
-                if(entry.State == EntityState.Detached)
+                if (entry.State == EntityState.Detached)
                     _context.Produto.Attach(produto);
 
                 _context.Produto.Remove(produto);
