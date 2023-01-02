@@ -188,6 +188,8 @@ namespace PastelECia.Views.Cadastro
 
                 CarregarGrid(_serviceProduto.ListarTodos());
                 LimparTela();
+
+                MessageBox.Show($"Produto {produto.Nome} inserido com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -316,6 +318,11 @@ namespace PastelECia.Views.Cadastro
                 throw new Exception("Erro ao buscar o produto");
 
             ObjetoParaTela(produto);
+        }
+
+        private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TxtSomenteNumeroKeyPress(sender, e);
         }
     }
 }

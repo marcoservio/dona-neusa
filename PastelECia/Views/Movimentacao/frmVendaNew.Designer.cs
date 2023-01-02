@@ -45,7 +45,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.dtgProduto = new System.Windows.Forms.DataGridView();
+            this.dtgVendas = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.panel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVendas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -257,11 +257,11 @@
             this.panel12.Size = new System.Drawing.Size(900, 35);
             this.panel12.TabIndex = 54;
             // 
-            // dtgProduto
+            // dtgVendas
             // 
-            this.dtgProduto.AllowUserToAddRows = false;
-            this.dtgProduto.AllowUserToDeleteRows = false;
-            this.dtgProduto.AllowUserToOrderColumns = true;
+            this.dtgVendas.AllowUserToAddRows = false;
+            this.dtgVendas.AllowUserToDeleteRows = false;
+            this.dtgVendas.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -269,8 +269,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgVendas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,19 +278,19 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgProduto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgProduto.Location = new System.Drawing.Point(0, 229);
-            this.dtgProduto.Name = "dtgProduto";
-            this.dtgProduto.ReadOnly = true;
-            this.dtgProduto.Size = new System.Drawing.Size(900, 336);
-            this.dtgProduto.TabIndex = 55;
+            this.dtgVendas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgVendas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgVendas.Location = new System.Drawing.Point(0, 229);
+            this.dtgVendas.Name = "dtgVendas";
+            this.dtgVendas.ReadOnly = true;
+            this.dtgVendas.Size = new System.Drawing.Size(900, 336);
+            this.dtgVendas.TabIndex = 55;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::PastelECia.Properties.Resources.calculadora;
+            this.button1.Image = global::ERP_DONA_NEUSA.Properties.Resources.calculadora;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(425, 3);
             this.button1.Name = "button1";
@@ -304,7 +304,7 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::PastelECia.Properties.Resources.vassoura;
+            this.button2.Image = global::ERP_DONA_NEUSA.Properties.Resources.vassoura;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(551, 3);
             this.button2.Name = "button2";
@@ -318,7 +318,7 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::PastelECia.Properties.Resources.impressora;
+            this.button3.Image = global::ERP_DONA_NEUSA.Properties.Resources.impressora;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(680, 3);
             this.button3.Name = "button3";
@@ -331,7 +331,7 @@
             // frmVendaNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.Controls.Add(this.dtgProduto);
+            this.Controls.Add(this.dtgVendas);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -343,7 +343,7 @@
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel3, 0);
             this.Controls.SetChildIndex(this.panel12, 0);
-            this.Controls.SetChildIndex(this.dtgProduto, 0);
+            this.Controls.SetChildIndex(this.dtgVendas, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -356,7 +356,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVendas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,7 +377,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.DataGridView dtgProduto;
+        private System.Windows.Forms.DataGridView dtgVendas;
         private System.Windows.Forms.ComboBox cmbProdutos;
         protected System.Windows.Forms.Button button3;
         protected System.Windows.Forms.Button button2;

@@ -129,7 +129,7 @@ namespace PastelECia.Views
             {
                 Cursor = Cursors.WaitCursor;
 
-                ConnectionTest.Test();
+                TesteConexao.Test();
                 MessageBox.Show("Conectado com sucesso", "Conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

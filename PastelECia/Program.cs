@@ -15,7 +15,7 @@ namespace PastelECia
         {
             try
             {
-                new ComBancoDados(true);
+                new AplicacaoComBancoDados(true);
                 new VersaoAvaliacao(false);
 
                 Application.EnableVisualStyles();

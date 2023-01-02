@@ -32,7 +32,7 @@ namespace PastelECia.Models
 
         public override string ToString()
         {
-            return $"{Nome} - {Descricao}";
+            return NomeDescricao;
         }
     }
 }

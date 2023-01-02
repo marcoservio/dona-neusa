@@ -61,7 +61,7 @@
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::PastelECia.Properties.Resources.cancelPadrao;
+            this.btnCancelar.Image = global::ERP_DONA_NEUSA.Properties.Resources.cancelarPadrao;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(375, 3);
             this.btnCancelar.Name = "btnCancelar";
@@ -75,7 +75,7 @@
             // 
             this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = global::PastelECia.Properties.Resources.okPadrao;
+            this.btnSalvar.Image = global::ERP_DONA_NEUSA.Properties.Resources.okPadrao;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.Location = new System.Drawing.Point(280, 3);
             this.btnSalvar.Name = "btnSalvar";
@@ -89,7 +89,7 @@
             // 
             this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = global::PastelECia.Properties.Resources.deletePadrao;
+            this.btnExcluir.Image = global::ERP_DONA_NEUSA.Properties.Resources.deletePadrao;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.Location = new System.Drawing.Point(487, 3);
             this.btnExcluir.Name = "btnExcluir";

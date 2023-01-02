@@ -9,15 +9,15 @@ using System.Windows.Forms;
 
 namespace PastelECia.Security
 {
-    public class ComBancoDados
+    public class AplicacaoComBancoDados
     {
-        public ComBancoDados(bool comBanco)
+        public AplicacaoComBancoDados(bool comBanco)
         {
             if (comBanco)
             {
                 try
                 {
-                    ConnectionTest.Test();
+                    TesteConexao.Test();
                     new ControleVersaoSistema(1, 1, 20);
                 }
                 catch (Exception ex)

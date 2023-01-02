@@ -66,6 +66,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProduto)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -431,6 +432,7 @@
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(264, 22);
             this.txtQuantidade.TabIndex = 2;
+            this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
             // 
             // label2
             // 
@@ -484,11 +486,14 @@
             this.Controls.Add(this.label36);
             this.Name = "frmCadastroProduto";
             this.Load += new System.EventHandler(this.frmCadastroProduto_Load);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.label36, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.dtgProduto, 0);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProduto)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel10.ResumeLayout(false);

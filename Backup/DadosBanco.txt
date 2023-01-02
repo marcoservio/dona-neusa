@@ -1,0 +1,105 @@
+USE [Pastel]
+GO
+SET IDENTITY_INSERT [dbo].[UnidadeMedida] ON 
+GO
+INSERT [dbo].[UnidadeMedida] ([Id_umd], [Nome_umd], [Inativo_umd], [DataAlteracao_umd], [Descricao_umd]) VALUES (1, N'UN', 0, CAST(N'2022-11-28T00:00:00.000' AS DateTime), N'Unidade')
+GO
+INSERT [dbo].[UnidadeMedida] ([Id_umd], [Nome_umd], [Inativo_umd], [DataAlteracao_umd], [Descricao_umd]) VALUES (2, N'KG', 0, CAST(N'2022-11-29T00:00:00.000' AS DateTime), N'Kilo')
+GO
+INSERT [dbo].[UnidadeMedida] ([Id_umd], [Nome_umd], [Inativo_umd], [DataAlteracao_umd], [Descricao_umd]) VALUES (3, N'CX', 0, CAST(N'2022-11-29T00:00:00.000' AS DateTime), N'Caixa')
+GO
+INSERT [dbo].[UnidadeMedida] ([Id_umd], [Nome_umd], [Inativo_umd], [DataAlteracao_umd], [Descricao_umd]) VALUES (4, N'PC', 0, CAST(N'2022-11-29T00:00:00.000' AS DateTime), N'Pacote')
+GO
+INSERT [dbo].[UnidadeMedida] ([Id_umd], [Nome_umd], [Inativo_umd], [DataAlteracao_umd], [Descricao_umd]) VALUES (6, N'CT', 0, CAST(N'2022-11-29T00:00:00.000' AS DateTime), N'Cento')
+GO
+INSERT [dbo].[UnidadeMedida] ([Id_umd], [Nome_umd], [Inativo_umd], [DataAlteracao_umd], [Descricao_umd]) VALUES (7, N'PT', 0, CAST(N'2022-11-29T00:00:00.000' AS DateTime), N'Pote')
+GO
+SET IDENTITY_INSERT [dbo].[UnidadeMedida] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Produto] ON 
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1005, N'Coxinha', N'Coxinha', CAST(2.30 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:21:25.700' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1006, N'Catupiry', N'Catupiry', CAST(2.50 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:21:40.607' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1007, N'Charuto', N'Charuto', CAST(2.35 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:21:59.887' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1008, N'Salsicha', N'Salsicha', CAST(2.15 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:22:11.723' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1009, N'Bolinha', N'Bolinha', CAST(2.35 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:22:28.263' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1010, N'Pastel de Strogonoff', N'Pastel de Strogonoff', CAST(2.35 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:22:45.067' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1011, N'Pastel de Milho', N'Pastel de Milho', CAST(2.30 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:23:04.957' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1012, N'Pastel de Carne', N'Pastel de Carne', CAST(2.35 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:23:24.927' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1013, N'Pastel de Napolitano', N'Pastel de Napolitano', CAST(2.35 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:23:41.767' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1014, N'Kibe de Carne', N'Kibe de Carne', CAST(2.50 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:24:00.287' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1015, N'Kibe de Requeijão', N'Kibe de Requeijão', CAST(2.50 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:24:25.703' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1016, N'Empada de Frango', N'Empada de Frango', CAST(2.20 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:24:41.523' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1017, N'Empada de Frango com Requeijão', N'Empada de Frango com Requeijão', CAST(2.40 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:25:20.480' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1018, N'Empada de Frango com Bacon', N'Empada de Frango com Bacon', CAST(2.40 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:25:36.223' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1019, N'Empada de Frango com Palmito', N'Empada de Frango com Palmito', CAST(2.40 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:26:23.190' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1020, N'Empada de Milho com Requeijão', N'Empada de Milho com Requeijão', CAST(2.30 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:26:40.600' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1021, N'Empada de Queijo', N'Empada de Queijo', CAST(3.00 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:26:56.323' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1022, N'Pastel Assado', N'Pastel Assado', CAST(2.40 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:29:38.873' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1023, N'Tortinha', N'Tortinha', CAST(2.70 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:30:01.260' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1024, N'Esfirra de Carne', N'Esfirra de Carne', CAST(2.30 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:30:20.373' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1025, N'Esfirra de Frango', N'Esfirra de Frango', CAST(2.30 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:30:35.763' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1026, N'Joelho', N'Joelho', CAST(2.35 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:30:50.607' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1027, N'Hot Dog', N'Hot Dog', CAST(2.35 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:31:07.477' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1028, N'Hambúrguer', N'Hambúrguer 10 undidades', CAST(3.10 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:33:48.460' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1029, N'Torta', N'Torta Grande', CAST(3.50 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:32:35.193' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1030, N'Cento Congelado', N'Cento Congelado 100 unidades', CAST(54.90 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:47:40.773' AS DateTime), 0, 6)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1031, N'Cento Frito', N'Cento Frito 100 unidades', CAST(59.90 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:47:47.997' AS DateTime), 0, 6)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1032, N'Coxinha Media', N'Coxinha Media', CAST(0.80 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:34:08.520' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1033, N'Bolinha Media', N'Bolinha Media', CAST(0.80 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:34:25.287' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1034, N'Empadinha Media', N'Empadinha Media', CAST(0.80 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:34:40.657' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1035, N'Kibinho Medio', N'Kibinho Medio', CAST(0.80 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:35:01.693' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1036, N'Salgado Mini Copo (Coxinha, Bolinha)', N'Salgado Mini Copo (Coxinha, Bolinha)', CAST(20.00 AS Decimal(10, 2)), 0, CAST(N'2022-12-01T17:35:27.357' AS DateTime), 0, 2)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1037, N'teste', N'teste', CAST(1000.00 AS Decimal(10, 2)), 10, CAST(N'2022-12-30T11:53:07.027' AS DateTime), 0, 1)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (1038, N'teste teste', N'10', CAST(10000.00 AS Decimal(10, 2)), 12, CAST(N'2022-12-30T11:57:04.723' AS DateTime), 0, 2)
+GO
+INSERT [dbo].[Produto] ([Id_prd], [Nome_prd], [Descricao_prd], [Valor_prd], [Quantidade_prd], [DataAlteracao_prd], [Inativo_prd], [UnidadeMedidaId_prd]) VALUES (2037, N'teste', N'adahjg', CAST(1000.00 AS Decimal(10, 2)), 1123, CAST(N'2023-01-02T09:15:45.947' AS DateTime), 0, 1)
+GO
+SET IDENTITY_INSERT [dbo].[Produto] OFF
+GO
+SET IDENTITY_INSERT [dbo].[VersaoSistema] ON 
+GO
+INSERT [dbo].[VersaoSistema] ([Id_vsi], [VersaoSistema_vsi], [VersaoBanco_vsi], [Revisao_vsi], [Inativo_vsi], [DataAlteracao_vsi]) VALUES (1, 1, 1, 16, 0, CAST(N'2022-12-07T13:24:48.013' AS DateTime))
+GO
+INSERT [dbo].[VersaoSistema] ([Id_vsi], [VersaoSistema_vsi], [VersaoBanco_vsi], [Revisao_vsi], [Inativo_vsi], [DataAlteracao_vsi]) VALUES (2, 1, 1, 17, 0, CAST(N'2022-12-09T10:08:13.077' AS DateTime))
+GO
+INSERT [dbo].[VersaoSistema] ([Id_vsi], [VersaoSistema_vsi], [VersaoBanco_vsi], [Revisao_vsi], [Inativo_vsi], [DataAlteracao_vsi]) VALUES (3, 1, 1, 19, 0, CAST(N'2022-12-27T09:46:17.323' AS DateTime))
+GO
+INSERT [dbo].[VersaoSistema] ([Id_vsi], [VersaoSistema_vsi], [VersaoBanco_vsi], [Revisao_vsi], [Inativo_vsi], [DataAlteracao_vsi]) VALUES (4, 1, 1, 20, 0, CAST(N'2022-12-28T17:20:53.913' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[VersaoSistema] OFF
+
+GO

@@ -7,8 +7,10 @@ namespace PastelECia.Models.Maps
         public EnderecoMap()
         {
             ToTable("Endereco");
-            HasKey(x => x.Id);
-            Property(x => x.Id).HasColumnName("Id_end");
+            HasKey(x => x.ClienteId);
+            HasRequired(x => x.Cliente)
+            .WithOptional(p => p.Endereco);
+            Property(x => x.ClienteId).HasColumnName("ClienteId_end");
             Property(x => x.Locradouro).IsRequired().HasColumnName("Locradouro_end").HasColumnType("varchar").HasMaxLength(100);
             Property(x => x.Numero).IsRequired().HasColumnName("Numero_end").HasColumnType("int");
             Property(x => x.Complemento).HasColumnName("Complemento_end").HasColumnType("varchar").HasMaxLength(100);

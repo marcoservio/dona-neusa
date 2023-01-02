@@ -20,8 +20,7 @@ namespace PastelECia.Models
         public string CnpjCpf { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
-        public int EnderecoId { get; set; }
-        public Endereco Endereco { get; set; }
+        public virtual Endereco Endereco { get; set; }
         public SimNao Inativo { get; set; }
         public DateTime DataAlteracao { get; set; }
     }

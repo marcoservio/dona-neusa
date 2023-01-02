@@ -15,6 +15,8 @@ namespace PastelECia.Models.Maps
         {
             ToTable("Cliente");
             HasKey(x => x.Id);
+            HasOptional(x => x.Endereco)
+            .WithRequired(x => x.Cliente);
             Property(x => x.Id).HasColumnName("Id_cli");
             Property(x => x.Nome).IsRequired().HasColumnName("Nome_cli").HasColumnType("varchar").HasMaxLength(70);
             Property(x => x.CnpjCpf).IsRequired().HasColumnName("CnpjCpf_cli").HasColumnType("varchar").HasMaxLength(14);

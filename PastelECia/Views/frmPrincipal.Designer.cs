@@ -275,14 +275,14 @@
             this.produtoToolStripMenuItem,
             this.clienteToolStripMenuItem1,
             this.endereçoToolStripMenuItem});
-            this.cadastroToolStripMenuItem.Image = global::PastelECia.Properties.Resources.add;
+            this.cadastroToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.add;
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.cadastroToolStripMenuItem.Text = "&Cadastro";
             // 
             // produtoToolStripMenuItem
             // 
-            this.produtoToolStripMenuItem.Image = global::PastelECia.Properties.Resources.comida;
+            this.produtoToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.comida;
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             this.produtoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.produtoToolStripMenuItem.Text = "&Produto";
@@ -290,14 +290,14 @@
             // 
             // clienteToolStripMenuItem1
             // 
-            this.clienteToolStripMenuItem1.Image = global::PastelECia.Properties.Resources.user;
+            this.clienteToolStripMenuItem1.Image = global::ERP_DONA_NEUSA.Properties.Resources.usuario;
             this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
             this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.clienteToolStripMenuItem1.Text = "&Cliente";
             // 
             // endereçoToolStripMenuItem
             // 
-            this.endereçoToolStripMenuItem.Image = global::PastelECia.Properties.Resources.endereco;
+            this.endereçoToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.endereco;
             this.endereçoToolStripMenuItem.Name = "endereçoToolStripMenuItem";
             this.endereçoToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.endereçoToolStripMenuItem.Text = "&Endereço";
@@ -308,28 +308,28 @@
             this.produtoToolStripMenuItem1,
             this.clienteToolStripMenuItem2,
             this.endereçoToolStripMenuItem1});
-            this.consultaToolStripMenuItem.Image = global::PastelECia.Properties.Resources.busca;
+            this.consultaToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.busca;
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.consultaToolStripMenuItem.Text = "&Consulta";
             // 
             // produtoToolStripMenuItem1
             // 
-            this.produtoToolStripMenuItem1.Image = global::PastelECia.Properties.Resources.comida;
+            this.produtoToolStripMenuItem1.Image = global::ERP_DONA_NEUSA.Properties.Resources.comida;
             this.produtoToolStripMenuItem1.Name = "produtoToolStripMenuItem1";
             this.produtoToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.produtoToolStripMenuItem1.Text = "&Produto";
             // 
             // clienteToolStripMenuItem2
             // 
-            this.clienteToolStripMenuItem2.Image = global::PastelECia.Properties.Resources.user;
+            this.clienteToolStripMenuItem2.Image = global::ERP_DONA_NEUSA.Properties.Resources.usuario;
             this.clienteToolStripMenuItem2.Name = "clienteToolStripMenuItem2";
             this.clienteToolStripMenuItem2.Size = new System.Drawing.Size(131, 22);
             this.clienteToolStripMenuItem2.Text = "&Cliente";
             // 
             // endereçoToolStripMenuItem1
             // 
-            this.endereçoToolStripMenuItem1.Image = global::PastelECia.Properties.Resources.endereco;
+            this.endereçoToolStripMenuItem1.Image = global::ERP_DONA_NEUSA.Properties.Resources.endereco;
             this.endereçoToolStripMenuItem1.Name = "endereçoToolStripMenuItem1";
             this.endereçoToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.endereçoToolStripMenuItem1.Text = "&Endereço";
@@ -338,14 +338,14 @@
             // 
             this.movimentaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vendaToolStripMenuItem});
-            this.movimentaçãoToolStripMenuItem.Image = global::PastelECia.Properties.Resources.porquinho;
+            this.movimentaçãoToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.porquinho;
             this.movimentaçãoToolStripMenuItem.Name = "movimentaçãoToolStripMenuItem";
             this.movimentaçãoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.movimentaçãoToolStripMenuItem.Text = "&Movimentação";
             // 
             // vendaToolStripMenuItem
             // 
-            this.vendaToolStripMenuItem.Image = global::PastelECia.Properties.Resources.venda;
+            this.vendaToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.venda;
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.vendaToolStripMenuItem.Text = "&Venda";
@@ -365,7 +365,7 @@
             // 
             // calculadoraToolStripMenuItem
             // 
-            this.calculadoraToolStripMenuItem.Image = global::PastelECia.Properties.Resources.calculadora;
+            this.calculadoraToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.calculadora;
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.calculadoraToolStripMenuItem.Text = "&Calculadora";
@@ -373,7 +373,7 @@
             // 
             // explorerToolStripMenuItem
             // 
-            this.explorerToolStripMenuItem.Image = global::PastelECia.Properties.Resources.file;
+            this.explorerToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.file;
             this.explorerToolStripMenuItem.Name = "explorerToolStripMenuItem";
             this.explorerToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.explorerToolStripMenuItem.Text = "&Explorer";
@@ -381,7 +381,7 @@
             // 
             // blocoDeNotasToolStripMenuItem
             // 
-            this.blocoDeNotasToolStripMenuItem.Image = global::PastelECia.Properties.Resources.notepad;
+            this.blocoDeNotasToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.blocoDeNotas;
             this.blocoDeNotasToolStripMenuItem.Name = "blocoDeNotasToolStripMenuItem";
             this.blocoDeNotasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.blocoDeNotasToolStripMenuItem.Text = "&Bloco de Notas";
@@ -389,7 +389,7 @@
             // 
             // excelToolStripMenuItem
             // 
-            this.excelToolStripMenuItem.Image = global::PastelECia.Properties.Resources.excel;
+            this.excelToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.excel;
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
             this.excelToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.excelToolStripMenuItem.Text = "&Excel";
@@ -397,7 +397,7 @@
             // 
             // wordToolStripMenuItem
             // 
-            this.wordToolStripMenuItem.Image = global::PastelECia.Properties.Resources.word;
+            this.wordToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.word;
             this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
             this.wordToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.wordToolStripMenuItem.Text = "&Word";
@@ -413,7 +413,7 @@
             // 
             // sobreToolStripMenuItem
             // 
-            this.sobreToolStripMenuItem.Image = global::PastelECia.Properties.Resources.about;
+            this.sobreToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.sobre;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.sobreToolStripMenuItem.Text = "&Sobre";

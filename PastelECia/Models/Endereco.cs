@@ -3,7 +3,7 @@ using System;
 
 namespace PastelECia.Models
 {
-    public class Endereco : IModelo
+    public class Endereco
     {
         public Endereco()
         {
@@ -19,7 +19,7 @@ namespace PastelECia.Models
             DataAlteracao = DateTime.Now;
         }
 
-        public int Id { get; set; }
+        public int ClienteId { get; set; }
         public string Locradouro { get; set; }
         public int Numero { get; set; }
         public string Complemento { get; set; }
@@ -30,5 +30,6 @@ namespace PastelECia.Models
         public string Cep { get; set; }
         public SimNao Inativo { get; set; }
         public DateTime DataAlteracao { get; set; }
+        public virtual Cliente Cliente { get; set; }
     }
 }
