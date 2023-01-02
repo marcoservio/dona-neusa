@@ -2,7 +2,6 @@ C:\Projects\pastel-e-cia\PastelECia\bin\Debug\x86\SqlServerSpatial160.dll
 C:\Projects\pastel-e-cia\PastelECia\bin\Debug\x64\SqlServerSpatial160.dll
 C:\Projects\pastel-e-cia\PastelECia\bin\Debug\ERP_DONA_NEUSA.exe.config
 C:\Projects\pastel-e-cia\PastelECia\bin\Debug\ERP_DONA_NEUSA.exe
-C:\Projects\pastel-e-cia\PastelECia\bin\Debug\ERP_DONA_NEUSA.pdb
 C:\Projects\pastel-e-cia\PastelECia\bin\Debug\Caelum.Stella.CSharp.dll
 C:\Projects\pastel-e-cia\PastelECia\bin\Debug\EntityFramework.dll
 C:\Projects\pastel-e-cia\PastelECia\bin\Debug\EntityFramework.SqlServer.dll
@@ -84,4 +83,3 @@ C:\Projects\pastel-e-cia\PastelECia\obj\Debug\ERP_DONA_NEUSA.csproj.GenerateReso
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\ERP_DONA_NEUSA.csproj.CoreCompileInputs.cache
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\ERP_DONA_NEUSA.csproj.CopyComplete
 C:\Projects\pastel-e-cia\PastelECia\obj\Debug\ERP_DONA_NEUSA.exe
-C:\Projects\pastel-e-cia\PastelECia\obj\Debug\ERP_DONA_NEUSA.pdb

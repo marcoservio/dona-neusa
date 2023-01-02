@@ -143,9 +143,9 @@ namespace ERP_DONA_NEUSA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap excel {
+        internal static System.Drawing.Bitmap exel {
             get {
-                object obj = ResourceManager.GetObject("excel", resourceCulture);
+                object obj = ResourceManager.GetObject("exel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

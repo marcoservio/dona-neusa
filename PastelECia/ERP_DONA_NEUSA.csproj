@@ -35,7 +35,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugType>embedded</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -54,6 +54,7 @@
   <PropertyGroup>
     <ApplicationIcon>logo64.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Caelum.Stella.CSharp, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Caelum.Stella.CSharp.1.4.7\lib\netstandard1.2\Caelum.Stella.CSharp.dll</HintPath>
@@ -229,14 +230,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dados\DAO\ClienteDao.cs" />
+    <Compile Include="Dados\ClienteDao.cs" />
     <Compile Include="Dados\Utilitarios\StringConexao.cs" />
-    <Compile Include="Dados\DAO\EnderecoDao.cs" />
-    <Compile Include="Dados\DAO\ParametroDao.cs" />
-    <Compile Include="Dados\DAO\ProdutoDao.cs" />
-    <Compile Include="Dados\DAO\UnidadeMedidaDao.cs" />
+    <Compile Include="Dados\EnderecoDao.cs" />
+    <Compile Include="Dados\ParametroDao.cs" />
+    <Compile Include="Dados\ProdutoDao.cs" />
+    <Compile Include="Dados\UnidadeMedidaDao.cs" />
     <Compile Include="Dados\Utilitarios\TesteConexao.cs" />
-    <Compile Include="Dados\DAO\VersaoSistemaDao.cs" />
+    <Compile Include="Dados\VersaoSistemaDao.cs" />
     <Compile Include="Dados\Utilitarios\ICommand.cs" />
     <Compile Include="Dados\Utilitarios\IQuery.cs" />
     <Compile Include="Migrations\202301021409211_Inicial.cs" />
@@ -391,7 +392,7 @@
     <Content Include="Images\comida.png" />
     <Content Include="Images\deletePadrao.png" />
     <Content Include="Images\endereco.png" />
-    <Content Include="Images\excel.png" />
+    <Content Include="Images\exel.png" />
     <Content Include="Images\file.png" />
     <Content Include="Images\Icons\logo.ico" />
     <Content Include="Images\impressora.png" />

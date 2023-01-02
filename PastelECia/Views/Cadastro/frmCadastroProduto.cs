@@ -189,7 +189,7 @@ namespace PastelECia.Views.Cadastro
                 CarregarGrid(_serviceProduto.ListarTodos());
                 LimparTela();
 
-                MessageBox.Show($"Produto {produto.Nome} inserido com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Produto {produto.Nome} inserido com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

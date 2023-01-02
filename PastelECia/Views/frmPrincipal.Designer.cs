@@ -389,7 +389,7 @@
             // 
             // excelToolStripMenuItem
             // 
-            this.excelToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.excel;
+            this.excelToolStripMenuItem.Image = global::ERP_DONA_NEUSA.Properties.Resources.exel;
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
             this.excelToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.excelToolStripMenuItem.Text = "&Excel";
